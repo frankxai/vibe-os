@@ -28,6 +28,8 @@ python tools/vibe-prompt-generator.py --list
 
 ## The Science
 
+**[Read the Full Whitepaper →](docs/whitepaper-the-science-of-state-change.md)**
+
 Vibe OS is built on peer-reviewed research from:
 - **Psychomusicology** - How music affects mood and cognition
 - **Music Therapy** - Clinical applications of music for state change
