@@ -1,181 +1,289 @@
-# Vibe OS Audio System
+# Vibe OS
+## Research-Backed Music for State Change
 
-**Research-backed frequency healing audio generation and AI music integration.**
+Transform your emotional state through scientifically-optimized music. Vibe OS combines:
 
-Generate binaural beats, pure Hz tones, solfeggio frequencies, and mix them with AI-generated music at scientifically-optimized levels.
+- **Music Psychology Research** - Tempo, mode, timbre, and lyrics science
+- **AI Music Generation** - Optimized prompts for Suno, Hailuo, Udio
+- **Frequency Healing** - Binaural beats and solfeggio frequencies
+- **Intelligent Mixing** - Research-backed audio layering
 
 ---
-
-## Features
-
-- **Frequency Generation** - Pure tones, binaural beats, isochronic tones
-- **Research-Backed Presets** - Based on peer-reviewed studies (PubMed, PMC)
-- **AI Music Integration** - Optimized prompts for Suno, Hailuo, Udio
-- **Intelligent Mixing** - 5 mixing levels including subliminal
-- **Professional Quality** - 48kHz, 24-bit audio output
 
 ## Quick Start
 
 ```bash
 # Clone the repo
-git clone https://github.com/YOUR_USERNAME/vibe-os.git
+git clone https://github.com/frankxai/vibe-os.git
 cd vibe-os
 
-# Generate a theta binaural beat (6 Hz on 432 Hz carrier)
-python tools/frequency-generator-pro.py --preset theta --duration 300 --output theta.wav
+# Generate a prompt for your desired state
+python tools/vibe-prompt-generator.py --state confidence --with-lyrics
 
-# Mix AI music with healing frequency
-python tools/vibe-os-mixer.py --music your_track.mp3 --frequency theta --output meditation.wav
-
-# Get Suno/Hailuo prompt for frequency-compatible music
-python tools/vibe-os-mixer.py --suno-prompt theta
+# List all available states
+python tools/vibe-prompt-generator.py --list
 ```
+
+---
+
+## The Science
+
+Vibe OS is built on peer-reviewed research from:
+- **Psychomusicology** - How music affects mood and cognition
+- **Music Therapy** - Clinical applications of music for state change
+- **Sports Psychology** - Music for performance enhancement
+- **Neuroscience** - Brain responses to musical elements
+
+### Key Findings
+
+| Element | Effect | Research |
+|---------|--------|----------|
+| **Tempo** | Higher BPM = Higher arousal | Nature Scientific Reports 2025 |
+| **Mode** | Major = positive, Minor = negative | PMC11220113 |
+| **Lyrics** | All 42 studies show emotional effects | PsyPost Meta-analysis |
+| **Music + Exercise** | +31% performance, +131% motivation | PMC8167645 |
+
+---
+
+## State Library
+
+### Energy States
+| State | BPM | Key | Use Case |
+|-------|-----|-----|----------|
+| `morning_energy` | 120 | G Major | Start day positive |
+| `high_energy` | 150 | E Major | Maximum drive |
+| `workout` | 145 | D Major | Exercise optimal |
+
+### Focus States
+| State | BPM | Key | Use Case |
+|-------|-----|-----|----------|
+| `deep_focus` | 90 | C Major | Study, work |
+| `creative_flow` | 100 | A Major | Ideas, creation |
+
+### Calm States
+| State | BPM | Key | Use Case |
+|-------|-----|-----|----------|
+| `relaxation` | 70 | F Major | Stress relief |
+| `meditation` | 60 | Mixed | Mindfulness |
+| `sleep` | 50 | D Minor | Rest preparation |
+
+### Emotional States
+| State | BPM | Key | Use Case |
+|-------|-----|-----|----------|
+| `confidence` | 128 | D Major | Self-assurance |
+| `gratitude` | 90 | G Major | Appreciation |
+| `emotional_release` | 72 | A Minor | Processing |
+| `joy` | 130 | D Major | Celebration |
+
+### Goal States
+| State | BPM | Key | Use Case |
+|-------|-----|-----|----------|
+| `manifestation` | 100 | E Major | Visualization |
+| `courage` | 115 | D Major | Face fears |
+| `healing` | 65 | F Major | Recovery |
+
+---
 
 ## Tools
 
-### frequency-generator-pro.py
+### vibe-prompt-generator.py
 
-Generate evidence-based healing frequencies.
+Generate AI music prompts optimized for your target state.
 
 ```bash
-# Pure 528 Hz "Love Frequency"
-python tools/frequency-generator-pro.py --freq 528 --duration 300 --quality high
+# Generate prompt for a state
+python tools/vibe-prompt-generator.py --state meditation
 
-# Theta binaural beat for meditation
-python tools/frequency-generator-pro.py --preset theta --duration 600
+# Include lyrics guidance
+python tools/vibe-prompt-generator.py --state confidence --with-lyrics
 
-# All solfeggio frequencies
-python tools/frequency-generator-pro.py --solfeggio all --duration 60
+# Output as JSON
+python tools/vibe-prompt-generator.py --state focus --json
+
+# List all states
+python tools/vibe-prompt-generator.py --list
 ```
 
-**Presets**: delta (sleep), theta (meditation), alpha (focus), beta (alertness), gamma (cognition)
+**Example Output:**
+```
+VIBE: CONFIDENCE BOOST
+
+--- SUNO/HAILUO PROMPT ---
+anthemic, 128 BPM, D Major, piano, brass, strings,
+powerful and driving, energetic, no soft acoustic
+
+--- LYRICS GUIDANCE ---
+Lyrics themes: power, self-belief, rising
+Core message: I walk with confidence
+Tone: powerful, high energy
+
+--- FREQUENCY PAIRING ---
+18 Hz binaural (alertness)
+```
 
 ### vibe-os-mixer.py
 
 Combine AI-generated music with healing frequencies.
 
 ```bash
-# Add subliminal 528 Hz to any song
-python tools/vibe-os-mixer.py --music song.mp3 --hz 528 --level subliminal --output healing.wav
+# Mix music with theta binaural
+python tools/vibe-os-mixer.py --music track.mp3 --frequency theta
 
-# Mix with binaural beat at research-optimal level
-python tools/vibe-os-mixer.py --music ambient.mp3 --frequency theta --level binaural_optimal
+# Add subliminal 528 Hz to any song
+python tools/vibe-os-mixer.py --music song.mp3 --hz 528 --level subliminal
 
 # Get instrument recommendations
-python tools/vibe-os-mixer.py --recommend theta
-```
-
-**Mixing Levels**:
-| Level | Frequency dB | Description |
-|-------|-------------|-------------|
-| `dominant` | -3 dB | Frequency leads the mix |
-| `balanced` | -6 dB | Equal presence |
-| `subtle` | -12 dB | Music leads, frequency adds texture |
-| `subliminal` | -24 dB | Below conscious hearing (still effective) |
-| `binaural_optimal` | -9 dB | Research-optimal for entrainment |
-
-### frequency-generator.py
-
-Lightweight generator for basic use cases.
-
-```bash
-python tools/frequency-generator.py --freq 432 --duration 60 --output tone.wav
-python tools/frequency-generator.py --binaural 432 6 --duration 300 --output binaural.wav
-```
-
-## Research Foundation
-
-This system is built on peer-reviewed research:
-
-### Binaural Beats (Strong Evidence)
-- **PMC10198548** (2023): Systematic review of 14 studies confirmed brain entrainment
-- **Scientific Reports** (Feb 2025): 80-participant EEG study confirmed gamma/attention effects
-- **PMC11367212** (2024): 84-study review showing improvements in pain, sleep, mood
-
-### 432 Hz (Moderate-Strong Evidence)
-- **PubMed 31031095** (2019): Heart rate reduced by 4.79 bpm (p=0.05)
-- **PubMed 35545982** (2022): Reduced stress markers in healthcare workers
-
-### 528 Hz (Moderate Evidence)
-- **SCIRP 87146** (2018): Decreased cortisol, increased oxytocin
-- **2023 Study**: Anxiety reduction of 4.625 points (p=0.006)
-
-### Subliminal Frequencies (Effective)
-- **PMC10196448**: Binaural beats below conscious hearing still produce measurable effects
-
-See [docs/frequency-healing-research.md](docs/frequency-healing-research.md) for full citations.
-
-## AI Music Integration
-
-### Supported Platforms
-
-| Platform | API Status | Max Duration |
-|----------|-----------|--------------|
-| **MiniMax/Hailuo** | Official API | 5 minutes |
-| **Suno** | Third-party | 4 minutes |
-| **Udio** | Third-party | 2:10 minutes |
-
-### Optimized Prompts
-
-```bash
-# Get Suno/Hailuo prompt for theta meditation
-python tools/vibe-os-mixer.py --suno-prompt theta
-
-# Output:
-# "Ambient meditation music, 60 BPM, soft ethereal pads,
-#  gentle singing bowl textures, spacious reverb, no drums,
-#  D minor, peaceful and introspective, float through space"
-```
-
-### Instrument Recommendations
-
-```bash
 python tools/vibe-os-mixer.py --recommend alpha
-
-# Best instruments: acoustic guitar, piano, light percussion, nature
-# Avoid: distortion, sudden changes
-# Tempo: 60-80 BPM
-# Key: G major, C major
 ```
 
-## Brainwave States
+### frequency-generator-pro.py
 
-| State | Frequency | Carrier | Effect |
-|-------|-----------|---------|--------|
-| Delta | 0.5-4 Hz | 200 Hz | Deep sleep, healing |
-| Theta | 4-8 Hz | 300 Hz | Meditation, creativity |
-| Alpha | 8-13 Hz | 400 Hz | Relaxation, calm focus |
-| Beta | 13-30 Hz | 400 Hz | Alertness, concentration |
-| Gamma | 30-100 Hz | 300 Hz | Peak cognition, insight |
+Generate pure Hz tones and binaural beats.
+
+```bash
+# Pure 528 Hz tone
+python tools/frequency-generator-pro.py --freq 528 --duration 300
+
+# Theta binaural beat
+python tools/frequency-generator-pro.py --preset theta --duration 600
+```
+
+---
+
+## Lyrics Psychology
+
+Research shows lyrics have powerful psychological effects:
+
+### Lyric Types and Effects
+
+| Type | Effect | Example Theme |
+|------|--------|---------------|
+| **Affirmation** | +Self-esteem, +Optimism | "I am unstoppable" |
+| **Empowerment** | +Agency, +Control | "I rise above" |
+| **Gratitude** | +Wellbeing, +Positivity | "Blessed by this moment" |
+| **Visualization** | +Goal clarity | "I see my victory" |
+| **Release** | Catharsis, Processing | "Let it all go" |
+
+### Writing Effective Lyrics
+
+1. **First person present tense** - "I am" not "I will be"
+2. **Specific and sensory** - Include visual/physical details
+3. **Emotional arc** - Build toward resolution
+4. **Prosocial content** - Increases empathy in listeners
+
+---
+
+## Frequency Pairing
+
+Enhance music with brainwave entrainment:
+
+| Brainwave | Frequency | State | Pair With |
+|-----------|-----------|-------|-----------|
+| Delta | 2 Hz | Deep sleep | sleep, healing |
+| Theta | 6 Hz | Meditation | meditation, creative_flow |
+| Alpha | 10 Hz | Calm focus | deep_focus, relaxation |
+| Beta | 18 Hz | Alertness | confidence, workout |
+| Gamma | 40 Hz | Peak cognition | high_energy |
+
+---
+
+## The ISO Principle
+
+For state transitions, start with music matching current state, then gradually shift:
+
+```
+Anxious → Calm:
+  110 BPM, A Minor → 90 BPM, D Minor → 75 BPM, G Major → 65 BPM, F Major
+```
+
+This leverages the brain's tendency to entrain to musical tempo and mode.
+
+---
+
+## Claude Code Skills
+
+This repo includes Claude Code skills for automatic prompt generation:
+
+```
+skills/
+├── vibe-os-master.md      # Complete state change system
+├── suno-ai-mastery.md     # Suno-specific techniques
+└── suno-prompt-architect.md # Advanced prompt engineering
+```
+
+Copy to `~/.claude/skills/` to enable in Claude Code.
+
+---
+
+## Research Citations
+
+### Primary Sources
+
+1. **PMC8167645** - Music preference and exercise performance
+2. **PMC11220113** - Musical mode and emotions
+3. **PMC2683716** - Timbre affects emotion perception
+4. **Frontiers Psychology 2025** - Music emotion regulation review
+5. **Nature Scientific Reports 2025** - Tempo modulates emotions
+6. **PsyPost 2024** - Lyrics psychological impact meta-analysis
+
+### Full Documentation
+
+- [Music Psychology Research](docs/music-psychology-research.md)
+- [Frequency Healing Research](docs/frequency-healing-research.md)
+- [Production System Guide](docs/vibe-os-production-system.md)
+
+---
 
 ## Requirements
-
-- Python 3.8+
-- NumPy
-- FFmpeg (optional, for MP3 support)
 
 ```bash
 pip install numpy
 ```
 
-## Documentation
+Optional: FFmpeg for MP3 support
 
-- [Production System Guide](docs/vibe-os-production-system.md)
-- [Frequency Research](docs/frequency-healing-research.md)
-- [Audio Library Guide](docs/README.md)
-- [Verification Report](docs/VERIFICATION_REPORT.md)
+---
 
-## Important Notes
+## Examples
 
-1. **Headphones Required** - Binaural beats only work with headphones
-2. **Minimum Duration** - 8+ minutes for brain entrainment
-3. **Comfortable Volume** - ~40 dB (moderate listening level)
-4. **Not Medical Advice** - Supplement, not replacement for treatment
+### Morning Routine
+```bash
+python tools/vibe-prompt-generator.py --state morning_energy --with-lyrics
+# Use output in Suno/Hailuo, then:
+python tools/vibe-os-mixer.py --music morning.mp3 --frequency alpha
+```
+
+### Workout Session
+```bash
+python tools/vibe-prompt-generator.py --state workout --with-lyrics
+# Generate in Suno at 145 BPM
+```
+
+### Evening Wind-Down
+```bash
+python tools/vibe-prompt-generator.py --state relaxation
+python tools/frequency-generator-pro.py --preset alpha --duration 600
+python tools/vibe-os-mixer.py --music relax.mp3 --frequency alpha --level subtle
+```
+
+---
 
 ## License
 
-MIT License - See [LICENSE](LICENSE) for details.
+MIT License - See [LICENSE](LICENSE)
+
+---
+
+## Contributing
+
+PRs welcome! Especially:
+- Additional research citations
+- New state presets
+- Improved prompt templates
+- Bug fixes
 
 ---
 
 *Part of the FrankX Superintelligent Agent System*
+
+**"Music is a legal performance-enhancing drug."** - Costas Karageorghis
