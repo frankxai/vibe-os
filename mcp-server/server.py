@@ -41,6 +41,7 @@ def _load_module(name: str, filename: str):
 
 
 vibe_gen = _load_module("vibe_prompt_generator", "vibe-prompt-generator.py")
+freq_gen = _load_module("frequency_generator_pro", "frequency-generator-pro.py")
 
 mcp = FastMCP("vibe-os")
 
@@ -100,7 +101,9 @@ def generate_transition_prompt(from_state: str, to_state: str) -> dict:
     """Generate a staged ISO-principle transition plan between emotional states
     (matching the listener's current state, then gradually shifting). Known
     transitions: anxious->calm, tired->energized, sad->hopeful, scattered->focused.
-    For other pairs, a generic two-stage plan is derived from the state library."""
+    For other pairs, to_state must be a library state; from_state is free-text
+    describing the listener's current state (the ISO principle starts where the
+    listener is, which need not be a library state)."""
     key = (from_state.lower().strip(), to_state.lower().strip())
     transitions = vibe_gen.STATE_TRANSITIONS
     if key in transitions:
@@ -125,7 +128,7 @@ def generate_transition_prompt(from_state: str, to_state: str) -> dict:
             "stages": stages,
             "note": "Generate one track per stage, or use Suno Extend with these parameters per section.",
         }
-    # Derive a generic plan when both ends exist in the state library
+    # Derive a generic plan: to_state from the library, from_state as described
     try:
         _, target = _state_or_error(to_state)
     except ValueError:
@@ -176,7 +179,7 @@ def list_frequency_presets() -> dict:
     """List frequency-session presets: brainwave entrainment bands (delta..gamma),
     evidence-backed frequencies (432/528/40 Hz with citations), solfeggio set
     (marked anecdotal), and curated session presets."""
-    freq = _load_module("frequency_generator_pro", "frequency-generator-pro.py")
+    freq = freq_gen
     return {
         "brainwave_bands": freq.BRAINWAVE_PRESETS,
         "evidence_based": freq.EVIDENCE_BASED,
@@ -198,18 +201,24 @@ def design_frequency_session(
     output_path: str = "",
 ) -> dict:
     """Design a frequency session (binaural beat or isochronic tone). Pass a preset
-    name from list_frequency_presets (e.g. 'deep-meditation', 'morning-focus') OR
-    explicit parameters. If output_path is set, renders a WAV file there (requires
-    numpy); otherwise returns parameters only."""
-    freq = _load_module("frequency_generator_pro", "frequency-generator-pro.py")
+    name from list_frequency_presets (e.g. 'deep-meditation', 'stress-relief') OR
+    explicit parameters. Layered presets mix a base frequency (e.g. 528 Hz) under
+    the binaural beat. If output_path is set, renders a WAV file there; otherwise
+    returns parameters only."""
+    freq = freq_gen
+    base_freq = None
+    harmonics = False
     if preset:
         if preset not in freq.SESSION_PRESETS:
             raise ValueError(f"Unknown preset '{preset}'. Available: {', '.join(freq.SESSION_PRESETS)}")
         p = freq.SESSION_PRESETS[preset]
-        session_type = p["type"] if p["type"] != "layered" else "binaural"
+        session_type = p["type"]
         carrier_freq = float(p.get("carrier", carrier_freq))
         beat_freq = float(p.get("beat", beat_freq))
         duration_seconds = int(p.get("duration", duration_seconds))
+        harmonics = bool(p.get("harmonics", False))
+        if session_type == "layered":
+            base_freq = float(p.get("base_freq", 528.0))
 
     band = next(
         (name for name, b in freq.BRAINWAVE_PRESETS.items()
@@ -225,6 +234,8 @@ def design_frequency_session(
         "listening_note": "Binaural beats require stereo headphones; "
                           "isochronic tones work on speakers.",
     }
+    if base_freq is not None:
+        result["base_freq_hz"] = base_freq
     if output_path:
         config = freq.QUALITY_CONFIGS[freq.AudioQuality.HIGH]
         out = Path(output_path).expanduser()
@@ -236,6 +247,14 @@ def design_frequency_session(
         else:
             left, right = freq.generate_binaural(carrier_freq, beat_freq, duration_seconds,
                                                  config.sample_rate)
+            if base_freq is not None:
+                if harmonics:
+                    base = freq.generate_with_harmonics(base_freq, duration_seconds,
+                                                        config.sample_rate, "warm")
+                else:
+                    base = freq.generate_sine(base_freq, duration_seconds, config.sample_rate)
+                left = 0.6 * base + 0.4 * left
+                right = 0.6 * base + 0.4 * right
             freq.save_wav(left, str(out), config, stereo=True, left=left, right=right)
         result["wav_file"] = str(out)
     return result
