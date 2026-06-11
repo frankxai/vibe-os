@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vibe-os"
+version = "0.2.0"
+description = "Research-backed music for state change: prompt generation, frequency sessions, and an MCP server"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.20.0"]
+
+[project.optional-dependencies]
+mcp = ["mcp>=1.2.0"]
+
+[project.urls]
+Homepage = "https://github.com/frankxai/vibe-os"
+Ecosystem = "https://github.com/frankxai/music-intelligence-systems"
+
+[tool.setuptools]
+packages = []
