@@ -16,11 +16,11 @@ Goals don't need a vibe — the *work the goal requires* does. Translate goal �
 | If the goal needs… | Target state | Vibe OS state preset | Dials |
 |--------------------|-------------|----------------------|-------|
 | Clarity to define the vision | Focused calm | `deep_focus` / `creative_flow` | 80–100 BPM · major · instrumental |
-| To feel the outcome as real | Steady confidence | `confidence` | 90–110 BPM · major · warm pads |
+| To feel the outcome as real | Steady confidence | `confidence` | 115–140 BPM · major · warm pads |
 | To create / render the vision | Creative flow | `creative_flow` | 90–115 BPM · major · piano/strings |
-| Energy to ship | Bold energy | `high_energy` / `morning_energy` | 115–135 BPM · major · driving |
-| To notice openings (attention) | Open awareness | `relaxation` (light) | 70–90 BPM · major · ambient |
-| Recovery / processing a setback | Emotional release | `emotional_release` / `healing` | 60–80 BPM · minor→major · strings |
+| Energy to ship | Bold energy | `high_energy` / `morning_energy` | 110–170 BPM · major · driving |
+| To notice openings (attention) | Open awareness | `relaxation` (light) | 60–80 BPM · major · ambient |
+| Recovery / processing a setback | Emotional release | `emotional_release` / `healing` | 55–85 BPM · minor→major · strings |
 
 ## Steps
 
