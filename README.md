@@ -1,3 +1,7 @@
+<p align="center">
+  <img src=".github/assets/hero.svg" width="100%" alt="Vibe OS — Creative operating system · Resonance · Flow state engineering"/>
+</p>
+
 # Vibe OS
 ## Research-Backed Music for State Change
 
@@ -180,7 +184,7 @@ Research shows lyrics have powerful psychological effects:
 Enhance music with brainwave entrainment:
 
 | Brainwave | Frequency | State | Pair With |
-|-----------|-----------|-------|-----------|
+|-----------|-----------|-------|----------|
 | Delta | 2 Hz | Deep sleep | sleep, healing |
 | Theta | 6 Hz | Meditation | meditation, creative_flow |
 | Alpha | 10 Hz | Calm focus | deep_focus, relaxation |

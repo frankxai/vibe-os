@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="1200" height="300">
+<defs>
+  <radialGradient id="bg" cx="50%" cy="50%" r="70%">
+    <stop offset="0%" stop-color="#080b10"/>
+    <stop offset="100%" stop-color="#0a0a0b"/>
+  </radialGradient>
+  <filter id="glow">
+    <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+    <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <linearGradient id="tg" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#10b981"/>
+    <stop offset="50%" stop-color="#06b6d4"/>
+    <stop offset="100%" stop-color="#f59e0b"/>
+  </linearGradient>
+</defs>
+<rect width="1200" height="300" fill="url(#bg)"/>
+
+<!-- Wave 1: emerald — base frequency -->
+<path id="w1" fill="none" stroke="#10b981" stroke-width="2.5" opacity="0.7" filter="url(#glow)"
+  d="M 0 130
+     C 60 110, 90 90, 150 130
+     C 210 170, 240 190, 300 130
+     C 360 70, 390 50, 450 130
+     C 510 210, 540 230, 600 130
+     C 660 30, 690 10, 750 130
+     C 810 250, 840 270, 900 130
+     C 960 -10, 990 -30, 1050 130
+     C 1110 290, 1140 310, 1200 130">
+  <animateTransform attributeName="transform" type="translate" values="0,0;-150,0;0,0" dur="4s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1"/>
+</path>
+
+<!-- Wave 2: cyan — slightly higher frequency -->
+<path id="w2" fill="none" stroke="#06b6d4" stroke-width="2" opacity="0.6"
+  d="M 0 145
+     C 50 115, 80 100, 120 145
+     C 160 190, 190 205, 240 145
+     C 290 85, 320 70, 360 145
+     C 400 220, 430 235, 480 145
+     C 530 55, 560 40, 600 145
+     C 640 250, 670 265, 720 145
+     C 770 25, 800 10, 840 145
+     C 880 280, 910 295, 960 145
+     C 1010 -5, 1040 -20, 1080 145
+     C 1120 310, 1160 310, 1200 145">
+  <animateTransform attributeName="transform" type="translate" values="0,0;120,0;0,0" dur="5.5s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1"/>
+</path>
+
+<!-- Wave 3: amber — slower, wider swings -->
+<path id="w3" fill="none" stroke="#f59e0b" stroke-width="1.8" opacity="0.5"
+  d="M 0 150
+     C 75 100, 125 80, 200 150
+     C 275 220, 325 240, 400 150
+     C 475 60, 525 40, 600 150
+     C 675 260, 725 280, 800 150
+     C 875 20, 925 0, 1000 150
+     C 1075 300, 1125 300, 1200 150">
+  <animateTransform attributeName="transform" type="translate" values="0,0;-200,0;0,0" dur="7s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1"/>
+</path>
+
+<!-- Center fade overlay to let text show -->
+<rect x="350" y="100" width="500" height="120" fill="url(#bg)" opacity="0.7"/>
+
+<!-- Title and tagline -->
+<text x="600" y="163" fill="url(#tg)" font-family="ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace" font-size="38" font-weight="700" text-anchor="middle" letter-spacing="6" filter="url(#glow)">VIBE OS</text>
+<text x="600" y="190" fill="#64748b" font-family="ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace" font-size="12" text-anchor="middle" letter-spacing="1">Creative operating system · Resonance · Flow state engineering</text>
+
+<!-- Decorative frequency labels -->
+<text x="90" y="245" fill="#10b981" font-family="ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace" font-size="9" opacity="0.5">528 Hz</text>
+<text x="580" y="268" fill="#06b6d4" font-family="ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace" font-size="9" opacity="0.5">40 Hz</text>
+<text x="1060" y="245" fill="#f59e0b" font-family="ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace" font-size="9" opacity="0.5">432 Hz</text>
+
+<!-- BPM indicator left -->
+<text x="24" y="283" fill="#f59e0b" font-family="ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace" font-size="11" opacity="0.8">Built on SIP</text>
+<text x="1176" y="283" fill="#334155" font-family="ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace" font-size="10" text-anchor="end" opacity="0.6">v1.0</text>
+</svg>
