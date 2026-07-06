@@ -374,6 +374,228 @@ VIBE_STATES: Dict[str, VibeState] = {
         music_styles=["healing ambient", "spa", "sound healing", "peaceful"],
         frequency_pairing="theta"
     ),
+
+    # ========== EMOTIONAL PROCESSING STATES ==========
+    "grief_processing": VibeState(
+        name="Grief Processing",
+        description="Hold space for loss and mourning without rushing the feeling",
+        bpm_range=(50, 70),
+        optimal_bpm=58,
+        keys=["D Minor", "A Minor", "C Minor"],
+        mode="minor",
+        instruments=["solo cello", "piano", "strings", "ambient pads"],
+        avoid_instruments=["drums", "brass", "electronic", "upbeat percussion"],
+        timbre="soft",
+        energy="low",
+        lyric_themes=["loss", "memory", "tears", "holding on", "goodbye"],
+        affirmations=[
+            "It is safe to grieve",
+            "My grief is love with nowhere to go",
+            "I honor what I have lost",
+            "Healing has no timeline"
+        ],
+        music_styles=["solo cello", "sad piano", "cinematic sad", "ambient elegy"],
+        frequency_pairing="theta"
+    ),
+
+    "anger_release": VibeState(
+        name="Anger Release",
+        description="Discharge anger safely through sound instead of suppressing it",
+        bpm_range=(120, 150),
+        optimal_bpm=135,
+        keys=["E Minor", "D Minor", "C Minor"],
+        mode="minor",
+        instruments=["driving drums", "distorted guitar", "synth bass", "brass stabs"],
+        avoid_instruments=["soft piano", "ambient pads", "acoustic guitar"],
+        timbre="powerful",
+        energy="high",
+        lyric_themes=["release", "fire", "boundaries", "reclaiming power", "the storm"],
+        affirmations=[
+            "My anger has a right to exist",
+            "I release this fire safely",
+            "I reclaim my power",
+            "I set the boundary I need"
+        ],
+        music_styles=["industrial", "rock", "cinematic tension", "aggressive electronic"],
+        frequency_pairing="beta"
+    ),
+
+    "letting_go": VibeState(
+        name="Letting Go",
+        description="Release control and surrender to acceptance",
+        bpm_range=(55, 75),
+        optimal_bpm=65,
+        keys=["A Minor", "F Major", "C Major"],
+        mode="mixed",
+        instruments=["soft piano", "ambient pads", "harp", "strings"],
+        avoid_instruments=["drums", "brass", "electronic", "bass"],
+        timbre="soft",
+        energy="low",
+        lyric_themes=["surrender", "release", "acceptance", "flow", "open hands"],
+        affirmations=[
+            "I release what I cannot control",
+            "Letting go is an act of trust",
+            "I open my hands and my heart",
+            "Surrender is not defeat, it is peace"
+        ],
+        music_styles=["ambient piano", "meditative", "soft cinematic", "peaceful acoustic"],
+        frequency_pairing="theta"
+    ),
+
+    # ========== SOCIAL / REFLECTIVE STATES ==========
+    "nostalgia": VibeState(
+        name="Nostalgia",
+        description="Bittersweet reflection on the past, warm but tinged with longing",
+        bpm_range=(85, 105),
+        optimal_bpm=95,
+        keys=["F Major", "A Minor", "G Major"],
+        mode="mixed",
+        instruments=["warm piano", "strings", "acoustic guitar", "vinyl crackle"],
+        avoid_instruments=["aggressive drums", "distortion", "heavy bass"],
+        timbre="warm",
+        energy="medium",
+        lyric_themes=["memory", "old friends", "faded photographs", "time passing", "bittersweet"],
+        affirmations=[
+            "I honor where I've been",
+            "The past shaped who I am",
+            "I hold memories with tenderness",
+            "Every chapter mattered"
+        ],
+        music_styles=["nostalgic pop", "indie folk", "cinematic warm", "retro acoustic"],
+        frequency_pairing="alpha"
+    ),
+
+    "curiosity": VibeState(
+        name="Curiosity",
+        description="Playful, exploratory mental state for learning and discovery",
+        bpm_range=(95, 120),
+        optimal_bpm=108,
+        keys=["A Major", "G Major", "D Major"],
+        mode="major",
+        instruments=["pizzicato strings", "light piano", "woodwinds", "playful percussion"],
+        avoid_instruments=["heavy bass", "aggressive drums", "drones"],
+        timbre="bright",
+        energy="medium",
+        lyric_themes=["wonder", "questions", "discovery", "exploration", "what if"],
+        affirmations=[
+            "I am curious about everything",
+            "Questions open new worlds",
+            "I explore without fear",
+            "Wonder guides me forward"
+        ],
+        music_styles=["whimsical orchestral", "indie pop", "playful cinematic", "light electronic"],
+        frequency_pairing="alpha"
+    ),
+
+    "romantic_connection": VibeState(
+        name="Romantic Connection",
+        description="Warmth and intimacy for closeness and devotion",
+        bpm_range=(70, 95),
+        optimal_bpm=82,
+        keys=["F Major", "A Major", "D Major"],
+        mode="major",
+        instruments=["warm piano", "strings", "acoustic guitar", "soft vocals"],
+        avoid_instruments=["aggressive drums", "distortion", "industrial elements"],
+        timbre="warm",
+        energy="low-medium",
+        lyric_themes=["connection", "tenderness", "closeness", "devotion", "intimacy"],
+        affirmations=[
+            "I am open to love",
+            "Connection is a gift I welcome",
+            "I see and am seen",
+            "Love flows easily between us"
+        ],
+        music_styles=["romantic ballad", "soft R&B", "acoustic love song", "warm cinematic"],
+        frequency_pairing="alpha"
+    ),
+
+    "celebration": VibeState(
+        name="Celebration",
+        description="Communal, festive joy for milestones and shared victories",
+        bpm_range=(110, 135),
+        optimal_bpm=122,
+        keys=["D Major", "G Major", "A Major"],
+        mode="major",
+        instruments=["horns", "upbeat percussion", "piano", "claps", "bass"],
+        avoid_instruments=["minor sounds", "drones", "somber strings"],
+        timbre="bright",
+        energy="high",
+        lyric_themes=["milestone", "togetherness", "toast", "victory lap", "joyful noise"],
+        affirmations=[
+            "This moment deserves celebration",
+            "We rise together",
+            "Joy multiplies when shared",
+            "I honor this milestone"
+        ],
+        music_styles=["festive pop", "brass band", "celebration anthem", "dance pop"],
+        frequency_pairing="gamma"
+    ),
+
+    "anticipation": VibeState(
+        name="Anticipation",
+        description="Building excitement and forward momentum before something arrives",
+        bpm_range=(100, 130),
+        optimal_bpm=112,
+        keys=["E Major", "D Major", "A Major"],
+        mode="major",
+        instruments=["building strings", "synth arps", "light percussion", "piano"],
+        avoid_instruments=["static drones", "sleepy pads"],
+        timbre="bright",
+        energy="medium-high",
+        lyric_themes=["the countdown", "almost there", "threshold", "what's coming", "edge of something new"],
+        affirmations=[
+            "I am ready for what's coming",
+            "Anticipation is excitement in disguise",
+            "I trust the timing of my life",
+            "Something good is on its way"
+        ],
+        music_styles=["building cinematic", "trailer music", "progressive electronic", "anthemic pop"],
+        frequency_pairing="beta"
+    ),
+
+    "awe": VibeState(
+        name="Awe",
+        description="Expansive wonder and transcendence in the face of something vast",
+        bpm_range=(60, 85),
+        optimal_bpm=72,
+        keys=["D Major", "G Major", "C Major"],
+        mode="major",
+        instruments=["choir", "strings", "organ", "ambient pads", "brass swells"],
+        avoid_instruments=["percussion-heavy beats", "distorted guitar"],
+        timbre="bright",
+        energy="low-medium",
+        lyric_themes=["vastness", "wonder", "the sublime", "smallness and connection", "transcendence"],
+        affirmations=[
+            "I am part of something vast",
+            "Wonder expands my perspective",
+            "I stand in awe of this life",
+            "The universe humbles and holds me"
+        ],
+        music_styles=["cinematic epic", "choral ambient", "orchestral wonder", "space ambient"],
+        frequency_pairing="theta"
+    ),
+
+    "playfulness": VibeState(
+        name="Playfulness",
+        description="Light, silly energy that makes room for fun",
+        bpm_range=(115, 140),
+        optimal_bpm=126,
+        keys=["C Major", "G Major", "A Major"],
+        mode="major",
+        instruments=["ukulele", "xylophone", "light percussion", "bouncy bass", "claps"],
+        avoid_instruments=["dark drones", "heavy distortion", "somber strings"],
+        timbre="bright",
+        energy="medium-high",
+        lyric_themes=["fun", "silliness", "lightness", "play", "laughter"],
+        affirmations=[
+            "I give myself permission to play",
+            "Lightness is its own wisdom",
+            "I laugh easily and often",
+            "Fun fuels my creativity"
+        ],
+        music_styles=["quirky pop", "whimsical acoustic", "ukulele pop", "bouncy indie"],
+        frequency_pairing="beta"
+    ),
 }
 
 # ============================================================================
@@ -524,7 +746,12 @@ def list_states():
         "Focus": ["deep_focus", "creative_flow"],
         "Calm": ["relaxation", "meditation", "sleep"],
         "Emotional": ["confidence", "gratitude", "emotional_release", "joy"],
-        "Goals": ["manifestation", "courage", "healing"]
+        "Goals": ["manifestation", "courage", "healing"],
+        "Emotional Processing": ["grief_processing", "anger_release", "letting_go"],
+        "Social / Reflective": [
+            "nostalgia", "curiosity", "romantic_connection", "celebration",
+            "anticipation", "awe", "playfulness"
+        ]
     }
 
     for category, states in categories.items():
@@ -560,7 +787,9 @@ Examples:
 Available States:
   morning_energy, high_energy, workout, deep_focus, creative_flow,
   relaxation, meditation, sleep, confidence, gratitude, emotional_release,
-  joy, manifestation, courage, healing
+  joy, manifestation, courage, healing, grief_processing, anger_release,
+  letting_go, nostalgia, curiosity, romantic_connection, celebration,
+  anticipation, awe, playfulness
 """
     )
 

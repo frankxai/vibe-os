@@ -22,6 +22,7 @@ Run:
 """
 
 import importlib.util
+import re
 import sys
 from pathlib import Path
 
@@ -51,6 +52,11 @@ STATE_CATEGORIES = {
     "calm": ["relaxation", "meditation", "sleep"],
     "emotional": ["confidence", "gratitude", "emotional_release", "joy"],
     "goals": ["manifestation", "courage", "healing"],
+    "emotional_processing": ["grief_processing", "anger_release", "letting_go"],
+    "social_reflective": [
+        "nostalgia", "curiosity", "romantic_connection", "celebration",
+        "anticipation", "awe", "playfulness",
+    ],
 }
 
 
@@ -285,6 +291,97 @@ def plan_session_mix(states: list[str], minutes_per_state: int = 10) -> dict:
         "segments": segments,
         "mixing_note": "Crossfade 2s between segments (see tools/vibe-os-mixer.py). "
                        "Layer the paired frequency at -20 dB under the music.",
+    }
+
+
+_STOPWORDS = {
+    "a", "an", "and", "are", "as", "at", "be", "but", "by", "for", "from",
+    "had", "has", "have", "i", "in", "into", "is", "it", "its", "me", "my",
+    "of", "on", "or", "that", "the", "this", "to", "want", "was", "were",
+    "will", "with", "you", "your",
+}
+
+
+def _tokenize(text: str) -> set:
+    return {w for w in re.findall(r"[a-z']+", text.lower()) if w not in _STOPWORDS}
+
+
+@mcp.tool()
+def compare_vibe_states(state_a: str, state_b: str) -> dict:
+    """Compare two vibe states side by side: BPM, key, mode, timbre, energy, and
+    instrumentation differences. Useful for choosing between similar states or
+    planning a bridge between them."""
+    key_a, a = _state_or_error(state_a)
+    key_b, b = _state_or_error(state_b)
+    instruments_a = set(a.instruments)
+    instruments_b = set(b.instruments)
+    return {
+        "state_a": key_a,
+        "state_b": key_b,
+        "bpm": {
+            "a": a.optimal_bpm, "b": b.optimal_bpm,
+            "delta": b.optimal_bpm - a.optimal_bpm,
+        },
+        "bpm_range": {"a": list(a.bpm_range), "b": list(b.bpm_range)},
+        "mode": {"a": a.mode, "b": b.mode, "same": a.mode == b.mode},
+        "keys": {
+            "a": a.keys, "b": b.keys,
+            "shared": sorted(set(a.keys) & set(b.keys)),
+        },
+        "timbre": {"a": a.timbre, "b": b.timbre, "same": a.timbre == b.timbre},
+        "energy": {"a": a.energy, "b": b.energy, "same": a.energy == b.energy},
+        "instruments": {
+            "shared": sorted(instruments_a & instruments_b),
+            "only_a": sorted(instruments_a - instruments_b),
+            "only_b": sorted(instruments_b - instruments_a),
+        },
+        "frequency_pairing": {
+            "a": a.frequency_pairing, "b": b.frequency_pairing,
+            "same": a.frequency_pairing == b.frequency_pairing,
+        },
+    }
+
+
+@mcp.tool()
+def recommend_state_for_goal(goal_text: str) -> dict:
+    """Recommend vibe states for a free-text goal via deterministic keyword overlap
+    against each state's name, description, lyric themes, and music styles (no LLM
+    or network calls). Returns the top 3 ranked states with a one-line reason each."""
+    goal_tokens = _tokenize(goal_text)
+    if not goal_tokens:
+        raise ValueError("goal_text must contain at least one word")
+
+    scored = []
+    for key, s in vibe_gen.VIBE_STATES.items():
+        corpus = " ".join([
+            key.replace("_", " "), s.name, s.description, s.timbre, s.energy,
+            " ".join(s.lyric_themes), " ".join(s.music_styles),
+        ])
+        overlap = sorted(goal_tokens & _tokenize(corpus))
+        if overlap:
+            scored.append((len(overlap), key, s, overlap))
+    scored.sort(key=lambda t: (-t[0], t[1]))
+    top = scored[:3]
+
+    if not top:
+        return {
+            "goal": goal_text,
+            "matches": [],
+            "note": "No keyword overlap found. Use list_vibe_states to browse all states.",
+        }
+
+    return {
+        "goal": goal_text,
+        "matches": [
+            {
+                "state": key,
+                "name": s.name,
+                "score": score,
+                "matched_terms": overlap,
+                "reason": f"Shares {', '.join(overlap)} with your goal.",
+            }
+            for score, key, s, overlap in top
+        ],
     }
 
 
