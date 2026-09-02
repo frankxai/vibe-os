@@ -1,0 +1,37 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review, edited]
+
+concurrency:
+  group: ci-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  tools:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      # setup-uv publishes no moving v10 tag, so this is pinned to the exact release.
+      - uses: astral-sh/setup-uv@v10.0.1
+        with:
+          python-version: "3.13"
+      - name: Every tool compiles
+        run: uv run --with-requirements requirements.txt python -m compileall -q tools
+      - name: Every tool imports and exposes its CLI
+        run: |
+          set -euo pipefail
+          for f in tools/*.py; do
+            echo "--- $f"
+            uv run --with-requirements requirements.txt python "$f" --help > /dev/null
+          done
+      - name: Example shell scripts parse
+        run: |
+          set -euo pipefail
+          for f in examples/*.sh; do bash -n "$f"; done
