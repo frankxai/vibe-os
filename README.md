@@ -274,6 +274,19 @@ python tools/vibe-os-mixer.py --music relax.mp3 --frequency alpha --level subtle
 
 ---
 
+## Manifestation & the Reality Architect Loop
+
+Vibe OS is a **state engine** — and the emotional state you carry changes what you actually do. That makes it the state-setting layer of a grounded manifestation practice: keep the real mechanisms (mental rehearsal, focused attention, deliberate state), drop the cosmology, and use self-made music to set the state your goal needs.
+
+- **[`skills/manifestation-alignment.md`](skills/manifestation-alignment.md)** — maps a goal → the state it needs → Vibe OS dials.
+- **[Reality Architect](https://github.com/frankxai/realityarchitect)** — the open method: architect your state *before* your systems (See → Design → Build → Automate → Compound).
+- **[awesome-manifestation-skills](https://github.com/frankxai/awesome-manifestation-skills)** — curated tools, research, and agent skills for the grounded practice.
+- **[frankx.ai/manifestation](https://frankx.ai/manifestation)** — the full hub: mechanism vs. belief, experiments, exercises, and a 10-day quest.
+
+This is the deliberate version of "raise your vibration" — music psychology, not magic.
+
+---
+
 ## License
 
 MIT License - See [LICENSE](LICENSE)
