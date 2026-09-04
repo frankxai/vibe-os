@@ -206,18 +206,37 @@ This leverages the brain's tendency to entrain to musical tempo and mode.
 
 ---
 
+## MCP Server
+
+The Vibe OS tools are available to any MCP client (Claude Code, Claude Desktop, Cursor) as structured tools — state library, prompt generation, ISO-principle transitions, frequency session design with WAV rendering, and multi-state session planning.
+
+```bash
+pip install -r mcp-server/requirements.txt
+claude mcp add vibe-os -- python3 mcp-server/server.py
+```
+
+See [`mcp-server/README.md`](mcp-server/README.md) for the full tool reference. A project-scope `.mcp.json` is included, so Claude Code picks the server up automatically inside this repo.
+
+---
+
 ## Claude Code Skills
 
 This repo includes Claude Code skills for automatic prompt generation:
 
 ```
 skills/
-├── vibe-os-master.md      # Complete state change system
-├── suno-ai-mastery.md     # Suno-specific techniques
-└── suno-prompt-architect.md # Advanced prompt engineering
+├── vibe-os-master/SKILL.md        # Complete state change system
+├── suno-ai-mastery/SKILL.md       # Suno-specific techniques
+└── suno-prompt-architect/SKILL.md # Advanced prompt engineering
 ```
 
-Copy to `~/.claude/skills/` to enable in Claude Code.
+Copy a skill directory to `~/.claude/skills/` to enable it in Claude Code, or install from the [claude-skills-library](https://github.com/frankxai/claude-skills-library).
+
+---
+
+## Music Intelligence System
+
+Vibe OS is the state-change engine of the [Music Intelligence System](https://github.com/frankxai/music-intelligence-systems) — the hub that connects this repo with the FrankX production agents, the Starlight sound-intelligence vertical, the [AI Music Academy](https://github.com/frankxai/ai-music-academy), portable agent exports (Claude Projects / Custom GPTs / Gemini Gems), and the [awesome-music-agent-skills](https://github.com/frankxai/awesome-music-agent-skills) directory. See the hub's `ECOSYSTEM.md` for the full map.
 
 ---
 
