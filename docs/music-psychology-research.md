@@ -6,12 +6,13 @@
 
 ## Executive Summary
 
-Music is a **legal performance-enhancing drug** that can:
-- Elevate mood and reduce perceived effort by 22%
-- Enhance physical performance by 31%
-- Trigger neurochemical release (dopamine, endorphins)
-- Modulate the amygdala (fight-or-flight response)
-- Improve motivation by 131% (effect size 1.31)
+One researcher (Costas Karageorghis) has called music a "legal performance-enhancing drug." The meta-analysis cited in section 6 reports:
+- Improved positive affect (g = 0.48)
+- Reduced perceived exertion (g = 0.22)
+- Improved physical performance (g = 0.31)
+- Improved motivation (d = 1.31, unverified; see the note in section 6)
+
+These are standardized effect sizes, not percentage gains. Section 8 (neurochemistry) has no citation in this repo and is background only.
 
 This document synthesizes research from psychomusicology, music therapy, and performance psychology to create an evidence-based system for state change.
 
@@ -47,20 +48,20 @@ The foundation of music-emotion research is Russell's (1980) circumplex model:
 
 ### Research-Backed BPM Ranges
 
-| State | BPM Range | Research Finding |
+| State | BPM Range | Working rationale (heuristic) |
 |-------|-----------|------------------|
-| Deep Relaxation | 50-70 | Matches resting heart rate |
-| Calm Focus | 70-90 | Alpha brainwave association |
-| Neutral/Walking | 100-120 | Natural human preference |
-| Energized | 120-140 | Optimal workout range |
-| High Intensity | 140-160 | Peak exercise motivation |
-| Maximum Drive | 160-180 | Sprint/HIIT optimal |
+| Deep Relaxation | 50-70 | Around resting heart rate |
+| Calm Focus | 70-90 | Moderate pulse; the alpha-brainwave link is a heuristic |
+| Neutral/Walking | 100-120 | Common walking and tapping tempo |
+| Energized | 120-140 | Common workout range |
+| High Intensity | 140-160 | Peak exercise motivation in the cited research |
+| Maximum Drive | 160-180 | Sprint/HIIT range |
 
 ### Key Findings
 
 **Scientific Reports (2025)**: Valence significantly increased with rising tempo (F = 222.27, p < 0.001), and arousal changes were also significant (F = 330.89, p < 0.001).
 
-**The 120 BPM Preference**: Humans have an innate preference for rhythms at 120 BPM - when asked to tap fingers or walk, people unconsciously settle into this rhythm.
+**The 120 BPM tendency**: when asked to tap fingers or walk, many people settle near 120 BPM. This doc treats it as a tendency, not an innate preference.
 
 **The 145 BPM Ceiling**: Research suggests a ceiling effect around 145 BPM for motivation - anything higher doesn't contribute additional benefit.
 
@@ -77,11 +78,13 @@ The foundation of music-emotion research is Russell's (1980) circumplex model:
 | **Major** | Happy, bright, triumphant, hopeful | Goals, motivation, celebration |
 | **Minor** | Sad, introspective, dramatic, emotional depth | Processing emotions, catharsis |
 
-**Research Finding**: The major-happy/minor-sad association has been documented since 16th century (Zarlino, 1558) and is psychologically robust across cultures.
+**Research Finding**: The major-happy/minor-sad association has been documented in Western music since the 16th century (Zarlino, 1558). The sources cited here do not establish that it holds across cultures.
 
 ### Specific Key Associations
 
-| Key | Traditional Association | Modern Research |
+The per-key descriptions below are traditional characterizations, not experimental findings.
+
+| Key | Traditional Association | Note |
 |-----|------------------------|-----------------|
 | C Major | Simple, bright, pure, innocent | Most positively perceived (no black keys) |
 | G Major | Peaceful, pastoral, calm | Relaxation and clarity |
@@ -95,7 +98,7 @@ The foundation of music-emotion research is Russell's (1980) circumplex model:
 | D Minor | Melancholic, serious, spiritual | Meditation, contemplation |
 | E Minor | Restless, anxious, forward-moving | Transformation, change |
 
-**Clinical Note**: Minor keys may be particularly effective for emotional processing, providing a "safe way to engage with negative emotions."
+**Note**: Minor keys may be particularly effective for emotional processing, providing a "safe way to engage with negative emotions."
 
 **Sources**: [NHSJS 2025](https://nhsjs.com/2025/correlations-between-major-minor-mode-key-signatures-and-perceived-emotions/), [PMC11220113](https://pmc.ncbi.nlm.nih.gov/articles/PMC11220113/)
 
@@ -105,7 +108,7 @@ The foundation of music-emotion research is Russell's (1980) circumplex model:
 
 ### Research Findings
 
-**Meta-Analysis Finding**: All 42 independent variables analyzed showed psychological effects aligned with lyrical narratives. Lyrics are "particularly potent at inducing emotional states."
+**Review finding (as summarized by PsyPost)**: All 42 independent variables analyzed showed psychological effects aligned with lyrical narratives. Lyrics are "particularly potent at inducing emotional states."
 
 **Semantic Processing**: Sad lyrics are processed at deeper semantic levels than happy lyrics - listeners make fewer errors when processing negative content.
 
@@ -113,7 +116,7 @@ The foundation of music-emotion research is Russell's (1980) circumplex model:
 
 ### Lyric Categories and Effects
 
-| Lyric Type | Psychological Effect | Use Case |
+| Lyric Type | Intended effect | Use Case |
 |------------|---------------------|----------|
 | **Affirmation** | Increased self-esteem, optimism | Morning routines, goal-setting |
 | **Empowerment** | Enhanced agency, control | Challenges, obstacles |
@@ -176,10 +179,12 @@ People select "coping songs" that **match their current state** (not desired sta
 
 | Metric | Effect Size | Finding |
 |--------|-------------|---------|
-| Positive Affect | g = 0.48 | Moderate-large improvement |
-| Perceived Exertion | g = 0.22 | Small-moderate reduction |
-| Physical Performance | g = 0.31 | Small-moderate improvement |
-| Motivation | d = 1.31 | Very large improvement |
+| Positive Affect | g = 0.48 | Moderate improvement |
+| Perceived Exertion | g = 0.22 | Small reduction |
+| Physical Performance | g = 0.31 | Small-to-moderate improvement |
+| Motivation | d = 1.31 | Very large, if correct (unverified) |
+
+These are standardized effect sizes (Hedges' g, Cohen's d), not percentage gains. The motivation value is far above the others and has not been re-checked against the source paper. The reference list names PMC8167645 differently in this repo's README ("Music preference and exercise performance") and in the whitepaper ("Effects of music in exercise and sport"); confirm which paper it is before quoting these numbers.
 
 ### Mechanisms
 
@@ -235,6 +240,8 @@ Current State → Match → Bridge → Target State
 
 ## 8. Neurochemistry of Music
 
+*No source for this section is cited in this repo. Treat it as background reading, not findings.*
+
 ### Neurotransmitter Effects
 
 | Chemical | Music Trigger | Subjective Effect |
@@ -242,12 +249,12 @@ Current State → Match → Bridge → Target State
 | **Dopamine** | Pleasurable music, anticipation | Reward, motivation, pleasure |
 | **Endorphins** | Rhythmic music, group singing | Pain reduction, euphoria |
 | **Oxytocin** | Shared musical experiences | Bonding, trust, connection |
-| **Cortisol (↓)** | Relaxing music, 528 Hz | Stress reduction |
+| **Cortisol (↓)** | Relaxing music, 528 Hz | Stress reduction (528 Hz: preliminary, see `frequency-healing-research.md`) |
 | **Serotonin** | Positive, uplifting music | Mood stabilization |
 
 ### Brain Regions Activated
 
-- **Amygdala**: Emotional processing, can be downregulated by calming music
+- **Amygdala**: Emotional processing
 - **Nucleus Accumbens**: Reward, pleasure
 - **Motor Cortex**: Movement entrainment
 - **Prefrontal Cortex**: Meaning, memory associations
@@ -256,6 +263,8 @@ Current State → Match → Bridge → Target State
 ---
 
 ## 9. Practical Application Matrix
+
+The recipes and presets below are working heuristics built from the associations above, not tested interventions.
 
 ### State Change Recipes
 

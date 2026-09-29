@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Frequency Generator Pro - Evidence-Based, Professional-Grade Hz Tone Generator
+Frequency Generator Pro - Professional-Grade Hz Tone Generator
 Part of the Vibe OS Audio System
 
 Features:
@@ -8,7 +8,7 @@ Features:
 - Proper normalization for maximum loudness (-0.1 dBFS)
 - Harmonic enrichment for fuller sound
 - Pink/brown noise layering options
-- Research-backed frequency presets
+- Frequency presets with research notes
 - Binaural beats with carrier optimization
 
 Research Sources:
@@ -17,7 +17,7 @@ Research Sources:
 - 528 Hz studies: SCIRP 87146, Journal of Addiction Research & Therapy
 
 Usage:
-    python frequency-generator-pro.py --freq 528 --duration 300 --quality pro -o healing.wav
+    python frequency-generator-pro.py --freq 528 --duration 300 --quality pro -o tone_528.wav
     python frequency-generator-pro.py --binaural theta --duration 600 --quality pro -o meditation.wav
     python frequency-generator-pro.py --preset morning-focus --duration 900 -o focus.wav
 """
@@ -37,42 +37,42 @@ from enum import Enum
 
 # Solfeggio frequencies with research notes
 SOLFEGGIO = {
-    174: {"name": "Foundation", "effect": "Pain reduction, security", "evidence": "Anecdotal"},
-    285: {"name": "Quantum", "effect": "Tissue healing, safety", "evidence": "Anecdotal"},
+    174: {"name": "Foundation", "effect": "Security (traditional)", "evidence": "Anecdotal"},
+    285: {"name": "Quantum", "effect": "Safety (traditional)", "evidence": "Anecdotal"},
     396: {"name": "Liberation", "effect": "Release fear and guilt", "evidence": "Anecdotal"},
-    417: {"name": "Change", "effect": "Facilitate change, clear trauma", "evidence": "Anecdotal"},
-    528: {"name": "Love/Miracle", "effect": "DNA repair, stress reduction", "evidence": "Preliminary studies (SCIRP 87146)"},
+    417: {"name": "Change", "effect": "Facilitate change (traditional)", "evidence": "Anecdotal"},
+    528: {"name": "Love/Miracle", "effect": "Love frequency (traditional); preliminary cortisol and oxytocin findings. DNA-repair claims lack rigorous evidence", "evidence": "Preliminary studies (SCIRP 87146)"},
     639: {"name": "Connection", "effect": "Relationships, communication", "evidence": "Anecdotal"},
     741: {"name": "Awakening", "effect": "Intuition, expression", "evidence": "Anecdotal"},
     852: {"name": "Intuition", "effect": "Spiritual order", "evidence": "Anecdotal"},
-    963: {"name": "Divine", "effect": "Pineal activation, oneness", "evidence": "Anecdotal"},
+    963: {"name": "Divine", "effect": "Oneness (traditional)", "evidence": "Anecdotal"},
 }
 
 # Research-backed frequencies
 EVIDENCE_BASED = {
     432: {
         "name": "Verdi A / Universal",
-        "effect": "Reduced heart rate (-4.79 bpm), lower blood pressure, improved sleep",
-        "evidence": "Multiple RCTs (PubMed 31031095, 35545982)",
-        "quality": "Strong preliminary evidence"
+        "effect": "Reported: lower heart rate (-4.79 bpm, p = 0.05) than 440 Hz in one study; sleep and blood-pressure findings from other small studies",
+        "evidence": "Small studies (PubMed 31031095, 35545982)",
+        "quality": "Preliminary"
     },
     528: {
         "name": "Love Frequency",
-        "effect": "Cortisol reduction, oxytocin increase, anxiety reduction",
+        "effect": "Reported: lower cortisol and higher oxytocin after 5 minutes (one study)",
         "evidence": "Japanese study 2018, SCIRP 87146",
-        "quality": "Moderate preliminary evidence"
+        "quality": "Preliminary"
     },
     40: {
         "name": "Gamma entrainment",
-        "effect": "Improved attention, cognitive performance",
+        "effect": "Reported: improved attention in one 2025 study",
         "evidence": "Scientific Reports 2025, PMC11799511",
-        "quality": "Strong evidence for brain entrainment"
+        "quality": "Single study; entrainment evidence overall is mixed"
     },
 }
 
 # Brainwave states with optimal parameters from research
 BRAINWAVE_PRESETS = {
-    "delta": {"range": (0.5, 4), "optimal": 2, "carrier": 200, "effect": "Deep sleep, healing, regeneration"},
+    "delta": {"range": (0.5, 4), "optimal": 2, "carrier": 200, "effect": "Deep sleep"},
     "theta": {"range": (4, 8), "optimal": 6, "carrier": 300, "effect": "Meditation, creativity, REM sleep"},
     "alpha": {"range": (8, 13), "optimal": 10, "carrier": 400, "effect": "Relaxation, calm focus, stress relief"},
     "beta": {"range": (13, 30), "optimal": 18, "carrier": 400, "effect": "Focus, alertness, concentration"},
@@ -106,7 +106,7 @@ SESSION_PRESETS = {
         "harmonics": False
     },
     "stress-relief": {
-        "description": "528 Hz with alpha binaural for anxiety reduction",
+        "description": "528 Hz with alpha binaural for relaxation",
         "type": "layered",
         "base_freq": 528,
         "carrier": 432,
@@ -382,23 +382,23 @@ def save_wav(audio: np.ndarray, filename: str, config: AudioConfig, stereo: bool
 def print_research_info():
     """Print research-backed frequency information."""
     print("\n" + "="*70)
-    print("EVIDENCE-BASED FREQUENCY GUIDE")
+    print("FREQUENCY GUIDE (research notes)")
     print("="*70)
 
-    print("\n### STRONGLY SUPPORTED BY RESEARCH ###\n")
+    print("\n### PRELIMINARY RESEARCH SUPPORT (small studies) ###\n")
     for freq, info in EVIDENCE_BASED.items():
         print(f"  {freq:>4} Hz - {info['name']}")
         print(f"         Effect: {info['effect']}")
         print(f"         Evidence: {info['evidence']}")
         print()
 
-    print("\n### SOLFEGGIO FREQUENCIES (Limited Scientific Evidence) ###\n")
+    print("\n### SOLFEGGIO FREQUENCIES (traditional associations; limited scientific evidence) ###\n")
     for freq, info in SOLFEGGIO.items():
         evidence_marker = "*" if info['evidence'] != "Anecdotal" else " "
         print(f"  {freq:>4} Hz - {info['name']:12} | {info['effect']}")
     print("\n  * Has preliminary research support")
 
-    print("\n### BRAINWAVE ENTRAINMENT (Strong Research Support) ###\n")
+    print("\n### BRAINWAVE ENTRAINMENT (mixed research support) ###\n")
     for state, info in BRAINWAVE_PRESETS.items():
         print(f"  {state.upper():6} ({info['range'][0]}-{info['range'][1]} Hz)")
         print(f"         Optimal: {info['optimal']} Hz beat | Carrier: {info['carrier']} Hz")
@@ -414,14 +414,14 @@ def print_research_info():
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Frequency Generator Pro - Evidence-Based, Professional-Grade",
+        description="Frequency Generator Pro - Professional-Grade Hz Tone Generator",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
-  # High-quality 528 Hz healing tone (5 min)
-  python frequency-generator-pro.py --freq 528 --duration 300 --quality pro -o healing.wav
+  # High-quality 528 Hz tone (5 min)
+  python frequency-generator-pro.py --freq 528 --duration 300 --quality pro -o tone_528.wav
 
-  # Research-optimized theta binaural (10 min)
+  # Theta binaural (10 min)
   python frequency-generator-pro.py --binaural theta --duration 600 --quality high -o theta.wav
 
   # Preset session
@@ -478,7 +478,7 @@ Examples:
         print("\n=== BRAINWAVE STATES ===")
         for state, info in BRAINWAVE_PRESETS.items():
             print(f"  {state:8} - {info['effect']}")
-        print("\n=== SOLFEGGIO FREQUENCIES ===")
+        print("\n=== SOLFEGGIO FREQUENCIES (traditional associations) ===")
         for freq, info in SOLFEGGIO.items():
             print(f"  {freq:4} Hz - {info['name']}: {info['effect']}")
         return

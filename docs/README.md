@@ -1,5 +1,5 @@
 # Vibe OS Audio Library
-*Evidence-Based Frequency Healing Audio Collection*
+*Frequency and Binaural Audio Collection*
 
 ---
 
@@ -7,7 +7,7 @@
 
 1. **Use headphones for binaural beats** (stereo files) - the effect requires different frequencies in each ear
 2. **Speakers work for pure tones** (mono files) and isochronic tones
-3. **Listen for 5+ minutes** - research shows effects require minimum exposure time
+3. **Listen for 5+ minutes** - the cited 528 Hz study used 5 minutes of exposure
 
 ---
 
@@ -19,12 +19,12 @@
 |------|------|----------|-------------|----------|
 | `432hz_universal_3min.wav` | Pure Tone | Mono | 432 Hz + harmonics | Relaxation, meditation |
 | `432hz_theta_binaural_3min.wav` | Binaural | Stereo | L:432Hz R:438Hz (6Hz beat) | Deep meditation, creativity |
-| `432hz_alpha_binaural_3min.wav` | Binaural | Stereo | L:432Hz R:442Hz (10Hz beat) | Calm focus, stress relief |
-| `528hz_love_frequency_3min.wav` | Pure Tone | Mono | 528 Hz + harmonics | Anxiety reduction, healing |
+| `432hz_alpha_binaural_3min.wav` | Binaural | Stereo | L:432Hz R:442Hz (10Hz beat) | Calm focus, relaxation |
+| `528hz_love_frequency_3min.wav` | Pure Tone | Mono | 528 Hz + harmonics | Relaxation |
 | `528hz_isochronic_alpha_3min.wav` | Isochronic | Mono | 528Hz pulsing at 10Hz | Focus (no headphones needed) |
 | `theta_meditation_3min.wav` | Binaural | Stereo | L:300Hz R:306Hz (6Hz beat) | Meditation, creativity |
 | `alpha_focus_3min.wav` | Binaural | Stereo | L:400Hz R:410Hz (10Hz beat) | Work focus, studying |
-| `delta_sleep_3min.wav` | Binaural | Stereo | L:200Hz R:202Hz (2Hz beat) | Deep sleep, healing |
+| `delta_sleep_3min.wav` | Binaural | Stereo | L:200Hz R:202Hz (2Hz beat) | Sleep wind-down |
 | `gamma_cognition_3min.wav` | Binaural | Stereo | L:300Hz R:340Hz (40Hz beat) | Peak cognition, memory |
 | `schumann_resonance_7.83hz_3min.wav` | Binaural | Stereo | L:432Hz R:440Hz (7.83Hz beat) | Grounding, theta state |
 | `theta_with_pink_noise_3min.wav` | Binaural+Noise | Stereo | L:432Hz R:438Hz + pink noise | Meditation with masking |
@@ -43,9 +43,9 @@ Sound Wave:  ∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿
              Continuous sine wave at specific frequency
 ```
 
-**How they work**: A single frequency plays continuously. The specific Hz value may have physiological effects:
-- **432 Hz**: Studies show reduced heart rate (-4.79 bpm) and blood pressure
-- **528 Hz**: Research indicates reduced cortisol, increased oxytocin
+**How they work**: A single frequency plays continuously. Small studies have reported physiological differences for specific Hz values (preliminary, see the research notes):
+- **432 Hz**: one study reported a lower heart rate (-4.79 bpm, p = 0.05) than 440 Hz
+- **528 Hz**: one study reported lower cortisol and higher oxytocin
 
 **Works with**: Speakers or headphones
 
@@ -58,12 +58,12 @@ Right Ear:  ∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿   (e.g., 438 Hz)
 Brain:      ████████████████   Perceives 6 Hz "beat"
 ```
 
-**How they work**: Different frequencies play in each ear. Your brain perceives the *difference* as a pulsing beat. This can entrain brainwaves to match.
+**How they work**: Different frequencies play in each ear. The listener perceives the *difference* as a pulsing beat. Whether this entrains brainwaves is mixed in the research (5 of 14 studies in one review).
 
 **Brainwave States**:
 | State | Beat Frequency | Effect |
 |-------|---------------|--------|
-| Delta | 0.5-4 Hz | Deep sleep, healing |
+| Delta | 0.5-4 Hz | Deep sleep |
 | Theta | 4-8 Hz | Meditation, creativity |
 | Alpha | 8-13 Hz | Relaxation, focus |
 | Beta | 13-30 Hz | Alertness, concentration |
@@ -114,7 +114,7 @@ Schumann:  Both ears hear 432 Hz AND 440 Hz mixed
 
 ## Audio Quality Specifications
 
-All files generated with research-optimized settings:
+All files generated with these settings:
 
 | Parameter | Value | Why |
 |-----------|-------|-----|
@@ -128,23 +128,23 @@ All files generated with research-optimized settings:
 
 ## Research Citations
 
-### Strong Evidence
+### Moderate Evidence (mixed)
 
-**Binaural Beats Work**
-- PMC10198548 (2023): Systematic review of 14 studies confirmed brain entrainment
-- Scientific Reports (Feb 2025): 80-participant study with EEG confirmation
-- PubMed 39699823 (Dec 2024): 84-study review showing improvements in pain, sleep, mood
+**Binaural beats**
+- PMC10198548 (2023): systematic review of 14 studies; 5 confirmed brain entrainment
+- Scientific Reports (Feb 2025): 80-participant study with EEG; a 40 Hz gamma beat on a low carrier with white noise improved attention
+- PubMed 39699823 (Dec 2024): 84-study review reporting improvements in pain, sleep, mood; the authors note larger samples are needed
 
-### Moderate-Strong Evidence
+### Moderate Evidence (small, preliminary studies)
 
-**432 Hz Reduces Stress**
+**432 Hz vs 440 Hz**
 - PubMed 31031095 (2019): Heart rate -4.79 bpm (p=0.05), double-blind crossover
 - PubMed 35545982 (2022): COVID nurses showed reduced BP, heart rate, respiratory rate
 - Mattioli1885 (2020): Sleep improvement +3.6 points in spinal cord injury patients
 
-**528 Hz Reduces Anxiety**
+**528 Hz**
 - SCIRP 87146 (2018): Decreased cortisol, increased oxytocin after 5 min exposure
-- 2023 Study: Anxiety reduction of 4.625 points (p=0.006)
+- 2023 Study: state-anxiety reduction of 4.625 points (p=0.006)
 
 ### Weak/Theoretical Evidence
 
@@ -175,11 +175,11 @@ Requirements: Comfortable headphones or sleep earbuds
 Duration: Loop through night or first hour
 ```
 
-### For Anxiety Relief
+### For Relaxation
 ```
 File: 528hz_love_frequency_3min.wav
 Requirements: Speakers or headphones
-Duration: Minimum 5 minutes (per research)
+Duration: At least 5 minutes (the exposure in the cited 528 Hz study)
 ```
 
 ### For Grounding
@@ -193,9 +193,9 @@ Duration: 10+ minutes
 
 ## Generation System
 
-Files generated using `/home/user/.claude/tools/frequency-generator-pro.py`
+Files generated using `tools/frequency-generator-pro.py`
 
-Research knowledge base: `/home/user/.claude/knowledge/frequency-healing-research.md`
+Research knowledge base: [`frequency-healing-research.md`](frequency-healing-research.md)
 
 ### Commands Used
 
