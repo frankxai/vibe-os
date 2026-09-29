@@ -317,6 +317,8 @@ y & Fusion Patterns
 When creating healing or meditation tracks, specify exact frequencies:
 
 ### Solfeggio Frequencies
+Traditional associations, not established effects. Only 528 Hz has preliminary studies (see docs/frequency-healing-research.md).
+
 - **174 Hz** - Pain reduction, grounding
 - **285 Hz** - Healing tissues, regeneration
 - **396 Hz** - Liberation from fear, guilt

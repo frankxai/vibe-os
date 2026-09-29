@@ -12,12 +12,12 @@ The Vibe OS toolkit, packaged: three Claude Code skills for AI-music prompt engi
 |---|---|---|
 | `skills/vibe-os-master.md` | 180 | The state-change system: state library, parameter mappings, workflow |
 | `skills/suno-ai-mastery.md` | 531 | Suno v4.5+ platform techniques and prompt engineering |
-| `skills/suno-prompt-architect.md` | 583 | Advanced Suno prompt construction for cinematic tracks |
+| `skills/suno-prompt-architect.md` | 585 | Advanced Suno prompt construction for cinematic tracks |
 | `tools/vibe-prompt-generator.py` | 624 | CLI: state → AI-music prompt (`--state`, `--with-lyrics`, `--json`, `--list`) |
 | `tools/vibe-os-mixer.py` | 460 | CLI: layer generated music with tones/binaural beats |
 | `tools/frequency-generator-pro.py` | 597 | CLI: generate pure tones and binaural-beat WAVs (`--freq`, `--preset`) |
 | `tools/frequency-generator.py` | 288 | Simpler tone generator (kept for minimal setups) |
-| `docs/` (7 files) | 1,905 | Whitepaper, music-psychology and frequency research with citations, production guide, quick reference, verification report |
+| `docs/` (7 files) | 1,895 | Whitepaper, music-psychology and frequency research with citations, production guide, quick reference, verification report |
 | `examples/` (2 scripts) | 67 | End-to-end sessions: meditation session, subliminal 528 Hz layer |
 | `requirements.txt` | 1 | `numpy>=1.20.0` (FFmpeg optional, for MP3) |
 
