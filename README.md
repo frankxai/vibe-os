@@ -276,7 +276,7 @@ python tools/vibe-os-mixer.py --music relax.mp3 --frequency alpha --level subtle
 
 ## License
 
-MIT License - See [LICENSE](LICENSE)
+Licensed under FSL-1.1-ALv2 (each version converts to Apache-2.0 two years after publication). See [LICENSE](LICENSE) and [LICENSING.md](LICENSING.md); earlier releases published under MIT remain under MIT.
 
 ---
 

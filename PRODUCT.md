@@ -29,7 +29,7 @@ Creators generating music with Suno (or similar) who want prompts derived from d
 
 - **Not medical, therapeutic, or clinical anything.** The docs cite published research on how musical parameters correlate with mood and performance; the toolkit applies those parameters to prompts and audio. No health outcomes are promised, and nothing here treats any condition.
 - **Not a music generator.** It writes prompts and processes audio files; the music itself comes from your Suno (or other) account, which you pay for separately.
-- **Not exclusive content.** The source is MIT-licensed and public ([frankxai/vibe-os](https://github.com/frankxai/vibe-os)). The paid product is the packaged, versioned edition delivered through checkout; buying it supports development. MIT terms apply either way.
+- **Not exclusive content.** The source is public ([frankxai/vibe-os](https://github.com/frankxai/vibe-os)) under FSL-1.1-ALv2; see `LICENSING.md` for what is licensed and what is reserved. The paid product is the packaged, versioned edition delivered through checkout; buying it supports development. The license terms apply either way.
 
 ## Packaging note (for the operator, not the buyer)
 
