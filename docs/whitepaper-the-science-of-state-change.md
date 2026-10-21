@@ -403,7 +403,7 @@ This is Vibe OS: music prompts built on published research.
 
 ## About Vibe OS
 
-Vibe OS is an open-source system for research-backed state change through music.
+Vibe OS is a source-available (FSL-1.1-ALv2) system for research-backed state change through music.
 
 **Tools available:**
 - Prompt generator for AI music (Suno, Hailuo, Udio)
@@ -422,5 +422,5 @@ Vibe OS is an open-source system for research-backed state change through music.
 
 ---
 
-*© 2025 FrankX. This whitepaper is open-source under MIT License.*
+*© 2025 FrankX. This whitepaper is licensed under FSL-1.1-ALv2 (see [LICENSE](../LICENSE) and [LICENSING.md](../LICENSING.md)); earlier releases published under MIT remain under MIT.*
 *Part of the Vibe OS System.*
