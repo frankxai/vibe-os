@@ -189,9 +189,8 @@ Music has been studied as an exercise aid.
 | Positive Affect | g = 0.48 | Moderate improvement |
 | Perceived Exertion | g = 0.22 | Small reduction |
 | Physical Performance | g = 0.31 | Small-to-moderate improvement |
-| Motivation | d = 1.31 | Very large, if correct (see note) |
 
-These are standardized effect sizes (Hedges' g, Cohen's d), not percentage gains. The motivation value is far above the other rows and has not been re-checked against the source paper, so treat it as unverified.
+These are standardized effect sizes (Hedges' g), not percentage gains. They come from Terry et al. (2020), a multilevel meta-analysis of 139 studies and 3,599 participants. That paper reports five outcomes (affective valence, physical performance, perceived exertion, oxygen consumption, heart rate) and no motivation outcome. An earlier version of this table listed a motivation effect of d = 1.31; it appears in neither Terry et al. nor PMC8167645, so it was removed.
 
 > "One could think of music as a type of legal performance-enhancing drug."
 > — Costas Karageorghis, Brunel University London
@@ -384,13 +383,14 @@ This is Vibe OS: music prompts built on published research.
 
 ### Primary Research
 
-1. **PMC8167645** - Terry, P.C., et al. (2020). Effects of music in exercise and sport: A meta-analytic review.
+1. **Terry et al. (2020)** - Terry, P.C., Karageorghis, C.I., Curran, M.L., Martin, O.V., & Parsons-Smith, R.L. Effects of music in exercise and sport: A meta-analytic review. Psychological Bulletin, 146(2). [doi:10.1037/bul0000216](https://doi.org/10.1037/bul0000216), [PMID 31804098](https://pubmed.ncbi.nlm.nih.gov/31804098/).
 2. **PMC11220113** - Musical mode and emotional perception studies.
 3. **PMC2683716** - Timbre's effect on emotion perception.
 4. **Nature Scientific Reports (2025)** - Tempo modulates emotional valence and arousal.
 5. **Frontiers Psychology (2024)** - Lyrics and emotional induction meta-analysis.
 6. **NHSJS (2025)** - Key signatures and perceived emotions.
 7. **PMC10198548** - Binaural beats systematic review.
+8. **PMC8167645** - Ballmann, C.G. (2021). The influence of music preference on exercise responses and performance: A review. Journal of Functional Morphology and Kinesiology, 6(2), 33.
 
 ### Key Researchers
 

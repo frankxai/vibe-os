@@ -10,7 +10,6 @@ One researcher (Costas Karageorghis) has called music a "legal performance-enhan
 - Improved positive affect (g = 0.48)
 - Reduced perceived exertion (g = 0.22)
 - Improved physical performance (g = 0.31)
-- Improved motivation (d = 1.31, unverified; see the note in section 6)
 
 These are standardized effect sizes, not percentage gains. Section 8 (neurochemistry) has no citation in this repo and is background only.
 
@@ -182,9 +181,8 @@ People select "coping songs" that **match their current state** (not desired sta
 | Positive Affect | g = 0.48 | Moderate improvement |
 | Perceived Exertion | g = 0.22 | Small reduction |
 | Physical Performance | g = 0.31 | Small-to-moderate improvement |
-| Motivation | d = 1.31 | Very large, if correct (unverified) |
 
-These are standardized effect sizes (Hedges' g, Cohen's d), not percentage gains. The motivation value is far above the others and has not been re-checked against the source paper. The reference list names PMC8167645 differently in this repo's README ("Music preference and exercise performance") and in the whitepaper ("Effects of music in exercise and sport"); confirm which paper it is before quoting these numbers.
+These are standardized effect sizes (Hedges' g), not percentage gains. They come from Terry et al. (2020), a multilevel meta-analysis of 139 studies and 3,599 participants (Psychological Bulletin 146(2), [doi:10.1037/bul0000216](https://doi.org/10.1037/bul0000216), [PMID 31804098](https://pubmed.ncbi.nlm.nih.gov/31804098/)). That paper reports five outcomes (affective valence, physical performance, perceived exertion, oxygen consumption, heart rate) and no motivation outcome. An earlier version of this table listed a motivation effect of d = 1.31 and cited PMC8167645. That figure appears in neither Terry et al. nor PMC8167645 (Ballmann, 2021, a narrative review that reports no pooled effect sizes), so it was removed.
 
 ### Mechanisms
 
@@ -207,7 +205,7 @@ These are standardized effect sizes (Hedges' g, Cohen's d), not percentage gains
 
 **Quote**: "One could think of music as a type of legal performance-enhancing drug." - Costas Karageorghis, Brunel University
 
-**Sources**: [PMC8167645](https://pmc.ncbi.nlm.nih.gov/articles/PMC8167645/), [Scientific American](https://www.scientificamerican.com/article/psychology-workout-music/)
+**Sources**: [Terry et al. 2020](https://doi.org/10.1037/bul0000216) (the effect sizes in section 6), [PMC8167645](https://pmc.ncbi.nlm.nih.gov/articles/PMC8167645/) (Ballmann 2021 review), [Scientific American](https://www.scientificamerican.com/article/psychology-workout-music/)
 
 ---
 
@@ -296,13 +294,14 @@ The recipes and presets below are working heuristics built from the associations
 ### Primary Sources
 
 1. **PMC10198548** - Binaural beats systematic review
-2. **PMC8167645** - Music preference and exercise performance
+2. **PMC8167645** - Ballmann (2021), The influence of music preference on exercise responses and performance: a review
 3. **PMC5702473** - Motivational music in sports
 4. **PMC11220113** - Musical mode and emotions
 5. **PMC2683716** - Timbre affects emotion perception
 6. **Frontiers Psychology 2025** - Music emotion regulation review
 7. **Nature Scientific Reports 2025** - Tempo modulates emotions
 8. **NHSJS 2025** - Key signatures and emotions
+9. **Terry et al. (2020)** - Effects of music in exercise and sport: a meta-analytic review. Psychological Bulletin 146(2), [doi:10.1037/bul0000216](https://doi.org/10.1037/bul0000216)
 
 ### Key Researchers
 

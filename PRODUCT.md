@@ -17,7 +17,7 @@ The Vibe OS toolkit, packaged: three Claude Code skills for AI-music prompt engi
 | `tools/vibe-os-mixer.py` | 460 | CLI: layer generated music with tones/binaural beats |
 | `tools/frequency-generator-pro.py` | 597 | CLI: generate pure tones and binaural-beat WAVs (`--freq`, `--preset`) |
 | `tools/frequency-generator.py` | 288 | Simpler tone generator (kept for minimal setups) |
-| `docs/` (7 files) | 1,895 | Whitepaper, music-psychology and frequency research with citations, production guide, quick reference, verification report |
+| `docs/` (7 files) | 1,894 | Whitepaper, music-psychology and frequency research with citations, production guide, quick reference, verification report |
 | `examples/` (2 scripts) | 67 | End-to-end sessions: meditation session, subliminal 528 Hz layer |
 | `requirements.txt` | 1 | `numpy>=1.20.0` (FFmpeg optional, for MP3) |
 

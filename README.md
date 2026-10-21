@@ -47,7 +47,7 @@ Vibe OS draws on published research from:
 | **Tempo** | Faster tempo was rated as higher arousal | Nature Scientific Reports 2025 |
 | **Mode** | Major tends to be rated more positive, minor more negative | PMC11220113 |
 | **Lyrics** | One review reports that all 42 independent variables analysed aligned with lyric content | PsyPost summary |
-| **Music + Exercise** | Effect sizes, not percentage gains: performance g = 0.31, perceived exertion g = 0.22, affect g = 0.48; motivation d = 1.31 (unverified, see [the research notes](docs/music-psychology-research.md)) | PMC8167645 |
+| **Music + Exercise** | Meta-analysis of 139 studies; effect sizes, not percentage gains: performance g = 0.31, perceived exertion g = 0.22, affect g = 0.48 (see [the research notes](docs/music-psychology-research.md)) | Terry et al. 2020 |
 
 ---
 
@@ -225,12 +225,13 @@ Copy to `~/.claude/skills/` to enable in Claude Code.
 
 ### Primary Sources
 
-1. **PMC8167645** - Music preference and exercise performance
+1. **PMC8167645** - Ballmann (2021), music preference and exercise performance (review)
 2. **PMC11220113** - Musical mode and emotions
 3. **PMC2683716** - Timbre affects emotion perception
 4. **Frontiers Psychology 2025** - Music emotion regulation review
 5. **Nature Scientific Reports 2025** - Tempo modulates emotions
 6. **PsyPost 2024** - Lyrics psychological impact meta-analysis
+7. **Terry et al. 2020** - Effects of music in exercise and sport: a meta-analytic review, Psychological Bulletin 146(2), [doi:10.1037/bul0000216](https://doi.org/10.1037/bul0000216)
 
 ### Full Documentation
 
