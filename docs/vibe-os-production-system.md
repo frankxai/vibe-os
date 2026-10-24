@@ -46,7 +46,7 @@ The Vibe OS Production System combines:
 ## Available Tools
 
 ### 1. frequency-generator-pro.py
-**Location**: `~/.claude/tools/frequency-generator-pro.py`
+**Location**: `tools/frequency-generator-pro.py`
 **Purpose**: Generate pure tones, binaural beats, isochronic tones
 
 ```bash
@@ -54,14 +54,14 @@ The Vibe OS Production System combines:
 python frequency-generator-pro.py --freq 432 --duration 180 --quality high
 
 # Theta binaural beat
-python frequency-generator-pro.py --binaural 432 6 --duration 300 --quality high
+python frequency-generator-pro.py --binaural-custom 432 6 --duration 300 --quality high
 
 # Research-backed preset
-python frequency-generator-pro.py --preset theta --duration 600 --output theta_session.wav
+python frequency-generator-pro.py --binaural theta --duration 600 --output theta_session.wav
 ```
 
 ### 2. vibe-os-mixer.py
-**Location**: `~/.claude/tools/vibe-os-mixer.py`
+**Location**: `tools/vibe-os-mixer.py`
 **Purpose**: Combine AI music with healing frequencies
 
 ```bash
@@ -269,7 +269,7 @@ heart opening, gentle nature sounds, deeply peaceful
 
 ```bash
 # 1. Generate frequency component
-python frequency-generator-pro.py --preset theta --duration 600 --output theta_tone.wav
+python frequency-generator-pro.py --binaural theta --duration 600 --output theta_tone.wav
 
 # 2. Get optimal Suno prompt
 python vibe-os-mixer.py --suno-prompt theta
@@ -301,7 +301,7 @@ python vibe-os-mixer.py --recommend theta
 #    - Download track
 
 # 3. Generate frequency (Frequency Engineer)
-python frequency-generator-pro.py --binaural 432 6 \
+python frequency-generator-pro.py --binaural-custom 432 6 \
   --duration 600 --quality high --output theta_binaural.wav
 
 # 4. Mix final output (Sonic Alchemist)
@@ -340,7 +340,7 @@ python vibe-os-mixer.py --music ai_ambient.mp3 \
 6. **Frontiers 2023** - Carrier 200-900 Hz optimal for entrainment
 7. **Scientific Reports 2025** - 40 Hz gamma improves attention
 
-Full research database: `~/.claude/knowledge/frequency-healing-research.md`
+Full research database: `docs/frequency-healing-research.md`
 
 ---
 

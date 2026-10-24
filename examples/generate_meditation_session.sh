@@ -13,7 +13,7 @@ echo ""
 # Step 1: Generate theta binaural beat
 echo "Step 1: Generating theta binaural beat..."
 python ../tools/frequency-generator-pro.py \
-    --preset theta \
+    --binaural theta \
     --duration $DURATION \
     --quality high \
     --output "$OUTPUT_DIR/theta_tone.wav"
