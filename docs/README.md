@@ -204,10 +204,10 @@ Research knowledge base: [`frequency-healing-research.md`](frequency-healing-res
 python frequency-generator-pro.py --freq 432 --duration 180 --quality high --harmonics warm
 
 # Theta binaural (6 Hz beat on 432 Hz carrier)
-python frequency-generator-pro.py --binaural 432 6 --duration 180 --quality high --harmonics
+python frequency-generator-pro.py --binaural-custom 432 6 --duration 180 --quality high --harmonics
 
 # Schumann resonance (7.83 Hz beat)
-python frequency-generator-pro.py --binaural 432 7.83 --duration 180 --quality high
+python frequency-generator-pro.py --binaural-custom 432 7.83 --duration 180 --quality high
 
 # 528 Hz love frequency
 python frequency-generator-pro.py --freq 528 --duration 180 --quality high --harmonics warm

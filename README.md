@@ -151,7 +151,7 @@ Generate pure Hz tones and binaural beats.
 python tools/frequency-generator-pro.py --freq 528 --duration 300
 
 # Theta binaural beat
-python tools/frequency-generator-pro.py --preset theta --duration 600
+python tools/frequency-generator-pro.py --binaural theta --duration 600
 ```
 
 ---
@@ -217,7 +217,7 @@ skills/
 └── suno-prompt-architect.md # Advanced prompt engineering
 ```
 
-Copy to `~/.claude/skills/` to enable in Claude Code.
+Copy to `skills/` to enable in Claude Code.
 
 ---
 
@@ -269,7 +269,7 @@ python tools/vibe-prompt-generator.py --state workout --with-lyrics
 ### Evening Wind-Down
 ```bash
 python tools/vibe-prompt-generator.py --state relaxation
-python tools/frequency-generator-pro.py --preset alpha --duration 600
+python tools/frequency-generator-pro.py --binaural alpha --duration 600
 python tools/vibe-os-mixer.py --music relax.mp3 --frequency alpha --level subtle
 ```
 
