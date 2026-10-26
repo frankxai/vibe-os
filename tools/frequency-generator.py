@@ -18,22 +18,22 @@ from typing import List, Tuple
 
 # Solfeggio frequencies and their properties
 SOLFEGGIO_FREQUENCIES = {
-    174: "Pain reduction, security",
-    285: "Tissue healing, safety",
+    174: "Security (traditional)",
+    285: "Safety (traditional)",
     396: "Liberation from fear, guilt",
     417: "Facilitating change, undoing situations",
-    528: "Love frequency, DNA repair, miracles",
+    528: "Love frequency (traditional)",
     639: "Relationships, reconnection",
     741: "Awakening intuition, expression",
     852: "Spiritual order, returning to source",
-    963: "Divine consciousness, pineal activation"
+    963: "Divine consciousness (traditional)"
 }
 
-# Common healing frequencies
+# Common named frequencies (traditional labels, not established effects)
 HEALING_FREQUENCIES = {
     "earth": 7.83,      # Schumann resonance
     "om": 136.1,        # Om frequency
-    "love": 528,        # Love/DNA repair
+    "love": 528,        # Love frequency
     "universal": 432,   # Universal tuning
     "crown": 963,       # Crown chakra
     "third_eye": 852,   # Third eye
@@ -46,7 +46,7 @@ HEALING_FREQUENCIES = {
 
 # Brainwave frequencies for binaural beats
 BRAINWAVE_STATES = {
-    "delta": (0.5, 4),    # Deep sleep, healing
+    "delta": (0.5, 4),    # Deep sleep
     "theta": (4, 8),      # Meditation, creativity
     "alpha": (8, 13),     # Relaxation, calm
     "beta": (13, 30),     # Focus, alertness
@@ -208,9 +208,9 @@ Examples:
   # List all available frequencies
   python frequency-generator.py --list
 
-Healing Frequencies:
-  174 Hz - Pain reduction       528 Hz - Love/DNA repair
-  285 Hz - Tissue healing       639 Hz - Relationships
+Traditional associations (not established effects):
+  174 Hz - Security             528 Hz - Love
+  285 Hz - Safety               639 Hz - Relationships
   396 Hz - Liberation           741 Hz - Intuition
   417 Hz - Change               852 Hz - Spiritual order
   432 Hz - Universal            963 Hz - Divine consciousness
@@ -233,11 +233,11 @@ Healing Frequencies:
     args = parser.parse_args()
 
     if args.list:
-        print("\n=== SOLFEGGIO FREQUENCIES ===")
+        print("\n=== SOLFEGGIO FREQUENCIES (traditional associations) ===")
         for freq, desc in SOLFEGGIO_FREQUENCIES.items():
             print(f"  {freq:>4} Hz - {desc}")
 
-        print("\n=== HEALING FREQUENCIES ===")
+        print("\n=== NAMED FREQUENCIES (traditional labels) ===")
         for name, freq in HEALING_FREQUENCIES.items():
             print(f"  {name:>10}: {freq:>6.2f} Hz")
 

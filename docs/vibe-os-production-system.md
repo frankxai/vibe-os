@@ -1,5 +1,5 @@
 # Vibe OS Production System
-*Complete Guide to AI-Powered Healing Music Production*
+*Complete Guide to AI-Assisted Music Production with Tones and Binaural Beats*
 *January 2025*
 
 ---
@@ -7,9 +7,9 @@
 ## System Overview
 
 The Vibe OS Production System combines:
-1. **Frequency Generation** - Research-backed healing tones
+1. **Frequency Generation** - Pure tones, binaural beats, and isochronic tones
 2. **AI Music Generation** - Suno, Hailuo/MiniMax, Udio APIs
-3. **Intelligent Mixing** - Research-optimized level blending
+3. **Intelligent Mixing** - Preset level blending
 4. **Agent Orchestration** - Specialized agents for each phase
 
 ```
@@ -62,14 +62,14 @@ python frequency-generator-pro.py --binaural theta --duration 600 --output theta
 
 ### 2. vibe-os-mixer.py
 **Location**: `tools/vibe-os-mixer.py`
-**Purpose**: Combine AI music with healing frequencies
+**Purpose**: Combine AI music with tones and binaural beats
 
 ```bash
 # Mix music with theta binaural
 python vibe-os-mixer.py --music track.mp3 --frequency theta --output meditation.wav
 
-# Subliminal 528 Hz in any song
-python vibe-os-mixer.py --music song.mp3 --hz 528 --level subliminal --output healing.wav
+# Low-level 528 Hz layer in any song
+python vibe-os-mixer.py --music song.mp3 --hz 528 --level subliminal --output toned.wav
 
 # Get Suno prompt for frequency-compatible music
 python vibe-os-mixer.py --suno-prompt theta
@@ -131,16 +131,16 @@ Output: 320kbps MP3
 | `dominant` | -6 | -3 | Frequency meditation, tone focus |
 | `balanced` | -3 | -6 | Equal music/frequency experience |
 | `subtle` | 0 | -12 | Music-forward with frequency texture |
-| `subliminal` | 0 | -24 | Frequencies below conscious hearing |
-| `binaural_optimal` | -3 | -9 | Research-optimal for entrainment |
+| `subliminal` | 0 | -24 | Frequency layer intended to sit below conscious hearing |
+| `binaural_optimal` | -3 | -9 | Preset used in these workflows (not an established optimum) |
 
 ### Research Notes
 
-**Subliminal Works**: Research shows binaural beats below conscious hearing still produce effects (PMC10196448). This eliminates placebo concerns.
+**Subliminal level**: one cited study (PMC10196448) reports effects from binaural beats presented below conscious hearing. That is a single report, and it does not remove placebo as an explanation.
 
-**Optimal Volume**: Studies used ~40 dB (comfortable listening level) for effective entrainment.
+**Volume**: the cited studies used about 40 dB, a comfortable listening level.
 
-**Minimum Duration**: 8+ minutes needed for brain resonance to target frequency.
+**Duration**: the cited sources used sessions of 8 minutes or more, so the workflows below use that as a minimum.
 
 ---
 
@@ -186,7 +186,7 @@ Tempo: Any
 Key: Natural tuning
 ```
 
-### For 528 Hz - Love/Healing
+### For 528 Hz - Love frequency (traditional name)
 ```
 Best: crystal singing bowl, harp, soft vocals, nature
 Avoid: dissonance, aggressive sounds
@@ -243,11 +243,11 @@ heart opening, gentle nature sounds, deeply peaceful
 
 ### Frequency Engineer
 **Trigger**: "hz", "binaural", "solfeggio", "healing frequency"
-**Role**: Generates evidence-based tones using frequency-generator-pro.py
+**Role**: Generates tones using frequency-generator-pro.py
 
 ### Sonic Alchemist
 **Trigger**: "mix", "layer", "combine", "subliminal"
-**Role**: Combines music + frequencies at optimal levels
+**Role**: Combines music + frequencies at preset levels
 
 ### Music API Integrator
 **Trigger**: "suno api", "hailuo api", "generate music"
@@ -280,12 +280,12 @@ python vibe-os-mixer.py --music suno_track.mp3 --frequency theta \
   --level binaural_optimal --output final_meditation.wav
 ```
 
-### Workflow 2: Subliminal Healing (Any Song)
+### Workflow 2: Low-level tone layer (any song)
 
 ```bash
-# Add subliminal 528 Hz to any existing song
+# Add a low-level 528 Hz layer to any existing song
 python vibe-os-mixer.py --music favorite_song.mp3 --hz 528 \
-  --level subliminal --output healing_version.wav
+  --level subliminal --output toned_version.wav
 ```
 
 ### Workflow 3: Full Production Session
@@ -322,7 +322,7 @@ python vibe-os-mixer.py --music ai_ambient.mp3 \
 - [ ] Frequency accuracy verified (FFT analysis)
 - [ ] Stereo separation confirmed for binaural files
 - [ ] Headphones tested for binaural effect
-- [ ] Duration is 8+ minutes for entrainment
+- [ ] Duration is 8+ minutes (the minimum used in the cited sources)
 - [ ] Volume comfortable (~40 dB equivalent)
 - [ ] No clipping in mixed output
 - [ ] Fade in/out applied (no clicks)
@@ -333,14 +333,14 @@ python vibe-os-mixer.py --music ai_ambient.mp3 \
 ## Research Sources
 
 1. **PMC10198548** - Binaural beats systematic review (14 studies)
-2. **PMC10196448** - Subliminal binaural beats still effective
-3. **PubMed 31031095** - 432 Hz reduces heart rate by 4.79 bpm
-4. **PubMed 35545982** - 432 Hz reduces stress in healthcare workers
-5. **SCIRP 87146** - 528 Hz reduces cortisol, increases oxytocin
-6. **Frontiers 2023** - Carrier 200-900 Hz optimal for entrainment
-7. **Scientific Reports 2025** - 40 Hz gamma improves attention
+2. **PMC10196448** - Binaural beats presented below conscious hearing (single report)
+3. **PubMed 31031095** - 432 Hz vs 440 Hz: heart rate 4.79 bpm lower (p = 0.05)
+4. **PubMed 35545982** - 432 Hz vs 440 Hz in healthcare workers (COVID nurse study)
+5. **SCIRP 87146** - 528 Hz: cortisol lower, oxytocin higher after 5 min (preliminary)
+6. **Frontiers 2023** - Carrier-frequency range reported for entrainment (200-900 Hz)
+7. **Scientific Reports 2025** - 40 Hz gamma beat improved attention in one study
 
-Full research database: `docs/frequency-healing-research.md`
+Full research summary: [`frequency-healing-research.md`](frequency-healing-research.md)
 
 ---
 
