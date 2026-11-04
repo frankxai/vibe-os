@@ -5,11 +5,11 @@
 # Vibe OS
 ## Research-Backed Music for State Change
 
-Transform your emotional state through scientifically-optimized music. Vibe OS combines:
+Music prompts and tone tools built on published music-psychology research. Vibe OS combines:
 
 - **Music Psychology Research** - Tempo, mode, timbre, and lyrics science
 - **AI Music Generation** - Optimized prompts for Suno, Hailuo, Udio
-- **Frequency Healing** - Binaural beats and solfeggio frequencies
+- **Tones and binaural beats** - Binaural beats and solfeggio-frequency tones (the evidence is mixed; see the research notes)
 - **Intelligent Mixing** - Research-backed audio layering
 
 ---
@@ -34,9 +34,9 @@ python tools/vibe-prompt-generator.py --list
 
 **[Read the Full Whitepaper →](docs/whitepaper-the-science-of-state-change.md)**
 
-Vibe OS is built on peer-reviewed research from:
+Vibe OS draws on published research from:
 - **Psychomusicology** - How music affects mood and cognition
-- **Music Therapy** - Clinical applications of music for state change
+- **Music Therapy** - Music-therapy literature on mood and state change (nothing in this repo is clinical)
 - **Sports Psychology** - Music for performance enhancement
 - **Neuroscience** - Brain responses to musical elements
 
@@ -44,10 +44,10 @@ Vibe OS is built on peer-reviewed research from:
 
 | Element | Effect | Research |
 |---------|--------|----------|
-| **Tempo** | Higher BPM = Higher arousal | Nature Scientific Reports 2025 |
-| **Mode** | Major = positive, Minor = negative | PMC11220113 |
-| **Lyrics** | All 42 studies show emotional effects | PsyPost Meta-analysis |
-| **Music + Exercise** | +31% performance, +131% motivation | PMC8167645 |
+| **Tempo** | Faster tempo was rated as higher arousal | Nature Scientific Reports 2025 |
+| **Mode** | Major tends to be rated more positive, minor more negative | PMC11220113 |
+| **Lyrics** | One review reports that all 42 independent variables analysed aligned with lyric content | PsyPost summary |
+| **Music + Exercise** | Meta-analysis of 139 studies; effect sizes, not percentage gains: performance g = 0.31, perceived exertion g = 0.22, affect g = 0.48 (see [the research notes](docs/music-psychology-research.md)) | Terry et al. 2020 |
 
 ---
 
@@ -129,7 +129,7 @@ Tone: powerful, high energy
 
 ### vibe-os-mixer.py
 
-Combine AI-generated music with healing frequencies.
+Combine AI-generated music with tones and binaural beats.
 
 ```bash
 # Mix music with theta binaural
@@ -202,7 +202,7 @@ Anxious → Calm:
   110 BPM, A Minor → 90 BPM, D Minor → 75 BPM, G Major → 65 BPM, F Major
 ```
 
-This leverages the brain's tendency to entrain to musical tempo and mode.
+This applies the iso principle from music therapy. This repo does not test it.
 
 ---
 
@@ -225,12 +225,13 @@ Copy to `skills/` to enable in Claude Code.
 
 ### Primary Sources
 
-1. **PMC8167645** - Music preference and exercise performance
+1. **PMC8167645** - Ballmann (2021), music preference and exercise performance (review)
 2. **PMC11220113** - Musical mode and emotions
 3. **PMC2683716** - Timbre affects emotion perception
 4. **Frontiers Psychology 2025** - Music emotion regulation review
 5. **Nature Scientific Reports 2025** - Tempo modulates emotions
 6. **PsyPost 2024** - Lyrics psychological impact meta-analysis
+7. **Terry et al. 2020** - Effects of music in exercise and sport: a meta-analytic review, Psychological Bulletin 146(2), [doi:10.1037/bul0000216](https://doi.org/10.1037/bul0000216)
 
 ### Full Documentation
 
@@ -276,7 +277,7 @@ python tools/vibe-os-mixer.py --music relax.mp3 --frequency alpha --level subtle
 
 ## License
 
-MIT License - See [LICENSE](LICENSE)
+Licensed under FSL-1.1-ALv2 (each version converts to Apache-2.0 two years after publication). See [LICENSE](LICENSE) and [LICENSING.md](LICENSING.md); earlier releases published under MIT remain under MIT.
 
 ---
 

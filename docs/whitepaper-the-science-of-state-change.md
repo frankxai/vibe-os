@@ -7,20 +7,18 @@
 
 ## Executive Summary
 
-What if you could engineer your emotional state as precisely as you mix a track?
+Can you choose music parameters to steer how a session feels?
 
-This isn't wishful thinking. It's peer-reviewed science.
+This paper summarizes published research from psychomusicology, music therapy, neuroscience, and sports psychology, and turns it into working presets. The research reports **associations between musical parameters and rated emotion**. It does not show that any preset will change a given listener's state.
 
-After synthesizing research from psychomusicology, music therapy, neuroscience, and sports psychology, we've distilled the evidence into an actionable system: **specific musical parameters create predictable emotional outcomes**.
+**What the sources report:**
+- Faster tempo was rated as higher arousal
+- Major mode tends to be rated more positive and minor more negative
+- Lyrics are described as "particularly potent" at inducing emotional states (one review of 42 independent variables, as summarized by PsyPost)
+- A meta-analysis reports small-to-moderate effects of music on exercise performance (g = 0.31) and affect (g = 0.48). These are effect sizes, not percentage gains
+- Neural entrainment to rhythm is an active research area; the evidence for binaural beats is mixed
 
-**Key Findings:**
-- Tempo directly controls arousal (energy level)
-- Musical mode (major/minor) controls valence (positive/negative)
-- Lyrics are "particularly potent" at inducing states (42-study meta-analysis)
-- Music improves physical performance by 31% and motivation by 131%
-- The brain literally entrains to musical tempo
-
-This whitepaper gives you the science—and the system to apply it.
+This whitepaper summarizes that research and the system built on it.
 
 ---
 
@@ -35,9 +33,7 @@ Most creators solve this randomly:
 - Energy drinks and willpower
 - "I'll wait until I feel inspired"
 
-**There's a better way.** Music isn't just entertainment—it's a state-change technology that's been studied for decades. The research exists. It just hasn't been translated for creators.
-
-Until now.
+Music has been studied for decades as a way to influence mood and arousal. Vibe OS translates that research into presets for creators.
 
 ---
 
@@ -62,7 +58,7 @@ Every emotional state lives on a two-dimensional map.
 
 This is Russell's Circumplex Model (1980), the foundation of emotion research.
 
-**The breakthrough**: Musical parameters map directly to this space.
+The literature maps musical parameters onto this space as associations, with individual variation.
 
 | Parameter | Dimension | Effect |
 |-----------|-----------|--------|
@@ -71,48 +67,46 @@ This is Russell's Circumplex Model (1980), the foundation of emotion research.
 | **Timbre** | Both | Bright = arousal, Soft = calm |
 | **Lyrics** | Both | Direct emotional induction |
 
-This means you can **navigate the emotional map** by adjusting musical parameters.
+Vibe OS uses these associations as starting points for choosing parameters:
 
-Want high energy + positive? High BPM + Major key.
-Want calm + introspective? Low BPM + Minor key.
-
-It's not magic. It's architecture.
+- High energy and positive: high BPM and a major key.
+- Calm and introspective: low BPM and a minor key.
 
 ---
 
 ## Part 2: Tempo—The Arousal Dial
 
-Tempo is your energy control.
+In the research, tempo is the parameter most associated with rated arousal.
 
 ### Research-Backed BPM Ranges
 
-| State | BPM | Why It Works |
+| State | BPM | Working rationale (heuristic) |
 |-------|-----|--------------|
-| Deep sleep | 40-60 | Matches delta brainwaves |
-| Meditation | 50-70 | Theta state induction |
-| Relaxation | 60-80 | Below resting heart rate |
-| Calm focus | 80-100 | Alpha brainwave territory |
-| Neutral/walking | 100-120 | Natural human preference |
-| Energized | 120-140 | Optimal workout range |
-| High intensity | 140-160 | Peak motivation zone |
+| Deep sleep | 40-60 | Slow pulse; the link to delta brainwaves is a heuristic, not a tested effect |
+| Meditation | 50-70 | Slow pulse; the link to theta is a heuristic, not a tested effect |
+| Relaxation | 60-80 | Around or below resting heart rate |
+| Calm focus | 80-100 | Moderate pulse; the link to alpha is a heuristic, not a tested effect |
+| Neutral/walking | 100-120 | Common walking and tapping tempo |
+| Energized | 120-140 | Common workout range |
+| High intensity | 140-160 | Peak motivation zone in the cited exercise research |
 
 ### Critical Findings
 
 **The 120 BPM Preference**
 
-When asked to tap fingers or walk naturally, humans unconsciously settle at 120 BPM. This is our baseline rhythm. Music at this tempo feels "natural" and easy to sync with.
+When asked to tap fingers or walk naturally, many people settle near 120 BPM. Vibe OS treats this as a tendency, not an innate rule, and uses it as a neutral baseline.
 
 *Source: Nature Scientific Reports, 2025*
 
 **The 145 BPM Ceiling**
 
-Research shows a ceiling effect around 145 BPM for motivation. Faster doesn't mean better—beyond this point, additional tempo doesn't increase drive.
+Research suggests a ceiling effect around 145 BPM for motivation: beyond this point, additional tempo did not increase drive.
 
 *Source: PMC4971092*
 
 **The Entrainment Effect**
 
-Your brain synchronizes to external rhythms. Heart rate, breathing, even brainwaves begin matching the music's tempo. This isn't metaphor—it's measurable neuroscience.
+Neural activity can track the beat of rhythmic sound, and entrainment is studied in several bodies of research. Whether heart rate, breathing, or brainwaves reliably match a piece's tempo in a given listener is less settled, and this repo does not test it.
 
 > "Valence significantly increased with rising tempo (F = 222.27, p < 0.001)"
 > — Nature Scientific Reports, 2025
@@ -121,9 +115,9 @@ Your brain synchronizes to external rhythms. Heart rate, breathing, even brainwa
 
 ## Part 3: Mode—The Emotional Color
 
-Major keys feel happy. Minor keys feel sad.
+Listeners tend to rate major keys as happier and minor keys as sadder.
 
-This isn't cultural conditioning—it's been documented since Zarlino in 1558 and holds across cultures.
+The association has been documented in Western music since Zarlino in 1558. The sources in this repo do not establish that it holds across cultures.
 
 ### Key Associations
 
@@ -140,28 +134,26 @@ This isn't cultural conditioning—it's been documented since Zarlino in 1558 an
 
 ### The Processing Power of Minor
 
-Here's something counterintuitive: minor keys aren't just "sad music."
+Minor keys are not only "sad music."
 
-Research shows minor keys provide a **safe container for processing difficult emotions**. Rather than suppressing negative feelings, minor-key music helps you move through them.
+One cited source suggests minor keys may offer a **safe way to engage with negative emotions**, which listeners can use for processing rather than suppressing them.
 
 > "Minor keys may be particularly effective for emotional processing, providing a 'safe way to engage with negative emotions.'"
 > — PMC11220113
 
-**Application**: Don't avoid minor keys. Use them strategically for emotional release, catharsis, and transformation work.
+**Application**: Vibe OS uses minor keys for its emotional-release and reflection presets.
 
 ---
 
 ## Part 4: Lyrics—The Direct Line to Emotion
 
-This is where it gets powerful.
+One review, as summarized by PsyPost, analysed 42 independent variables and reported that **all 42 showed psychological effects aligned with lyrical content**.
 
-A meta-analysis of 42 independent studies found that **all 42 showed psychological effects aligned with lyrical content**. Not most. Not many. All.
-
-Lyrics are "particularly potent at inducing emotional states."
+The review describes lyrics as "particularly potent at inducing emotional states."
 
 ### Lyric Categories and Effects
 
-| Type | Psychological Effect | Example |
+| Type | Intended effect | Example |
 |------|---------------------|---------|
 | **Affirmation** | +Self-esteem, +Optimism | "I am unstoppable" |
 | **Empowerment** | +Agency, +Control | "I rise above this" |
@@ -171,7 +163,7 @@ Lyrics are "particularly potent at inducing emotional states."
 
 ### Writing Effective Lyrics
 
-Research-backed guidelines:
+Craft guidelines (only the prosocial point has a source in this repo):
 
 1. **First person, present tense**: "I am" not "I will be"
 2. **Specific and sensory**: Include visual and physical details
@@ -180,9 +172,7 @@ Research-backed guidelines:
 
 ### The Semantic Depth Effect
 
-Fascinating finding: sad lyrics are processed at **deeper semantic levels** than happy lyrics. When content is negative, listeners pay closer attention and make fewer comprehension errors.
-
-This explains why meaningful, emotionally complex songs create lasting impact.
+One cited finding: sad lyrics are processed at **deeper semantic levels** than happy lyrics, and listeners make fewer errors on negative content.
 
 *Source: Frontiers Psychology, 2024*
 
@@ -190,18 +180,17 @@ This explains why meaningful, emotionally complex songs create lasting impact.
 
 ## Part 5: Performance Enhancement
 
-Here's where music becomes a legitimate performance tool.
+Music has been studied as an exercise aid.
 
 ### Meta-Analysis Results
 
 | Metric | Effect Size | Meaning |
 |--------|-------------|---------|
-| Positive Affect | g = 0.48 | Moderate-large improvement |
-| Perceived Exertion | g = 0.22 | Exercise feels 22% easier |
-| Physical Performance | g = 0.31 | 31% performance boost |
-| **Motivation** | **d = 1.31** | **131% increase** |
+| Positive Affect | g = 0.48 | Moderate improvement |
+| Perceived Exertion | g = 0.22 | Small reduction |
+| Physical Performance | g = 0.31 | Small-to-moderate improvement |
 
-That motivation number isn't a typo. Music produces a **very large** effect on willingness to push through difficulty.
+These are standardized effect sizes (Hedges' g), not percentage gains. They come from Terry et al. (2020), a multilevel meta-analysis of 139 studies and 3,599 participants. That paper reports five outcomes (affective valence, physical performance, perceived exertion, oxygen consumption, heart rate) and no motivation outcome. An earlier version of this table listed a motivation effect of d = 1.31; it appears in neither Terry et al. nor PMC8167645, so it was removed.
 
 > "One could think of music as a type of legal performance-enhancing drug."
 > — Costas Karageorghis, Brunel University London
@@ -232,8 +221,6 @@ Why does music enhance performance?
 
 ## Part 6: The ISO Principle
 
-This is the secret to state transitions.
-
 Music therapists use the **ISO Principle**: start with music that **matches** your current state, then gradually shift to your target state.
 
 ```
@@ -243,19 +230,17 @@ Example: Anxious → Calm
   110 BPM, A Minor  →  90 BPM, D Minor  →  75 BPM, G Major  →  65 BPM, F Major
 ```
 
-**Why this works**: Your brain resists sudden shifts. But it will follow gradual changes. Match first, then lead.
-
-This is entrainment in action—and it's why a single "pump-up song" often fails when you're in a low state. You need the bridge.
+**Rationale**: match the current state first, then shift gradually. This is a music-therapy heuristic; the sources in this repo do not test it.
 
 ---
 
 ## Part 7: Frequency Enhancement
 
-Beyond composition, specific frequencies produce measurable effects.
+Beyond composition, specific frequencies have been studied for their effects. Results are mixed and often come from small studies (see `frequency-healing-research.md`).
 
 ### Binaural Beats
 
-When slightly different frequencies play in each ear, your brain perceives a third "beat" at the difference frequency. This can influence brainwave states:
+When slightly different frequencies play in each ear, the listener perceives a third "beat" at the difference frequency. One systematic review (PMC10198548) found 5 of 14 studies confirmed brainwave entrainment. The bands below are the conventional labels:
 
 | Brainwave | Frequency | State | Application |
 |-----------|-----------|-------|-------------|
@@ -267,17 +252,17 @@ When slightly different frequencies play in each ear, your brain perceives a thi
 
 ### Solfeggio Frequencies
 
-Ancient tones with modern research support:
+Tones popularized in the 1990s; claims of ancient origin lack historical documentation.
 
-| Frequency | Association | Research |
+| Frequency | Traditional association | Research in this repo |
 |-----------|-------------|----------|
-| 396 Hz | Liberation from fear | Anxiety reduction |
-| 528 Hz | "Love frequency" | Cortisol reduction, DNA repair claims |
-| 639 Hz | Connection | Relationship harmony |
-| 741 Hz | Intuition | Problem-solving |
-| 852 Hz | Spiritual awareness | Meditation depth |
+| 396 Hz | Liberation from fear | No controlled studies |
+| 528 Hz | "Love frequency" | Preliminary cortisol and oxytocin findings; DNA-repair claims lack rigorous evidence |
+| 639 Hz | Connection | No controlled studies |
+| 741 Hz | Intuition | No controlled studies |
+| 852 Hz | Spiritual awareness | No controlled studies |
 
-*Note: Frequency healing research is emerging. Effects are subtle and individual. Use as enhancement, not replacement for evidence-based approaches.*
+*Note: Frequency research is preliminary. Use these tones as an optional layer, not a replacement for medical care.*
 
 ---
 
@@ -380,19 +365,17 @@ Frequency: Alpha (10 Hz) binaural
 
 ## Conclusion: Music as Technology
 
-Music isn't background noise. It's a **state-change technology** with decades of research behind it.
+Music has decades of research behind it as an influence on mood and arousal.
 
-The science is clear:
-- Tempo controls your energy
-- Mode shapes your emotional color
-- Lyrics directly induce psychological states
-- The right music improves performance by 31% and motivation by 131%
+What the sources support:
+- Tempo is associated with rated arousal
+- Mode is associated with rated valence
+- Lyrics are reported to carry emotional effects aligned with their content
+- Music showed small-to-moderate effects on exercise performance and affect in a meta-analysis (g = 0.31 and g = 0.48)
 
-You don't have to guess anymore. You don't have to shuffle and hope.
+Vibe OS turns those associations into presets you can test against your own experience.
 
-**You can engineer your emotional state.**
-
-This is Vibe OS: research-backed music for intentional living.
+This is Vibe OS: music prompts built on published research.
 
 ---
 
@@ -400,13 +383,14 @@ This is Vibe OS: research-backed music for intentional living.
 
 ### Primary Research
 
-1. **PMC8167645** - Terry, P.C., et al. (2020). Effects of music in exercise and sport: A meta-analytic review.
+1. **Terry et al. (2020)** - Terry, P.C., Karageorghis, C.I., Curran, M.L., Martin, O.V., & Parsons-Smith, R.L. Effects of music in exercise and sport: A meta-analytic review. Psychological Bulletin, 146(2). [doi:10.1037/bul0000216](https://doi.org/10.1037/bul0000216), [PMID 31804098](https://pubmed.ncbi.nlm.nih.gov/31804098/).
 2. **PMC11220113** - Musical mode and emotional perception studies.
 3. **PMC2683716** - Timbre's effect on emotion perception.
 4. **Nature Scientific Reports (2025)** - Tempo modulates emotional valence and arousal.
 5. **Frontiers Psychology (2024)** - Lyrics and emotional induction meta-analysis.
 6. **NHSJS (2025)** - Key signatures and perceived emotions.
 7. **PMC10198548** - Binaural beats systematic review.
+8. **PMC8167645** - Ballmann, C.G. (2021). The influence of music preference on exercise responses and performance: A review. Journal of Functional Morphology and Kinesiology, 6(2), 33.
 
 ### Key Researchers
 
@@ -419,7 +403,7 @@ This is Vibe OS: research-backed music for intentional living.
 
 ## About Vibe OS
 
-Vibe OS is an open-source system for research-backed state change through music.
+Vibe OS is a source-available (FSL-1.1-ALv2) system for research-backed state change through music.
 
 **Tools available:**
 - Prompt generator for AI music (Suno, Hailuo, Udio)
@@ -438,5 +422,5 @@ Vibe OS is an open-source system for research-backed state change through music.
 
 ---
 
-*© 2025 FrankX. This whitepaper is open-source under MIT License.*
+*© 2025 FrankX. This whitepaper is licensed under FSL-1.1-ALv2 (see [LICENSE](../LICENSE) and [LICENSING.md](../LICENSING.md)); earlier releases published under MIT remain under MIT.*
 *Part of the Vibe OS System.*

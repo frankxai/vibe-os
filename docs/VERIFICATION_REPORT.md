@@ -255,7 +255,7 @@ These files are **completely different**:
 | solfeggio_963hz_crown_2min.wav | 17 MB | 2:00 | 10/10 |
 
 **Total Library Size**: ~520 MB
-**Total Duration**: 38 minutes
+**Total Duration**: 39 minutes
 
 ---
 

@@ -355,7 +355,7 @@ VIBE_STATES: Dict[str, VibeState] = {
 
     "healing": VibeState(
         name="Healing",
-        description="Support physical and emotional healing",
+        description="Calm, restorative music",
         bpm_range=(55, 75),
         optimal_bpm=65,
         keys=["F Major", "C Major", "G Major"],

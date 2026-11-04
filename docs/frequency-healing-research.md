@@ -1,5 +1,5 @@
 # Frequency Healing Research Knowledge Base
-*Evidence-based guide for the Vibe OS Audio System*
+*Research summary with evidence ratings for the Vibe OS Audio System*
 *Last Updated: January 2025*
 
 ---
@@ -16,14 +16,14 @@
 
 ## 1. Binaural Beats & Brainwave Entrainment
 
-### Evidence Level: **STRONG**
+### Evidence Level: **MODERATE** (mixed; larger samples are needed)
 
 #### Key Research
 
 **Systematic Review (PMC10198548, 2023)**
 - 14 studies reviewed on brainwave entrainment
 - 5 studies confirmed entrainment hypothesis
-- Brain does synchronize to beat frequencies
+- The other 9 did not confirm it, so the evidence is mixed
 - Source: https://pmc.ncbi.nlm.nih.gov/articles/PMC10198548/
 
 **Parametric Investigation (Scientific Reports, Feb 2025)**
@@ -38,23 +38,23 @@
 - Need larger sample sizes for definitive conclusions
 - Source: https://pubmed.ncbi.nlm.nih.gov/39699823/
 
-#### Optimal Parameters (Research-Derived)
+#### Parameters used by these tools (starting points, not established optima)
 
-| State | Beat Frequency | Optimal Carrier | Effect |
+| State | Beat Frequency | Carrier used | Traditional association |
 |-------|---------------|-----------------|--------|
-| Delta | 0.5-4 Hz | 100-200 Hz | Deep sleep, healing |
+| Delta | 0.5-4 Hz | 100-200 Hz | Deep sleep |
 | Theta | 4-8 Hz | 200-400 Hz | Meditation, creativity |
 | Alpha | 8-13 Hz | 300-500 Hz | Relaxation, calm focus |
 | Beta | 13-30 Hz | 400-500 Hz | Alertness, concentration |
 | Gamma | 30-100 Hz | 200-400 Hz | Peak cognition, memory |
 
-**Key Finding**: Lower carrier tones (200-400 Hz) show better entrainment than higher carriers.
+**Reported in one 2025 study**: a 40 Hz gamma beat on a low carrier with white noise improved attention. The carrier ranges in the table are working choices.
 
 ---
 
 ## 2. 432 Hz Tuning
 
-### Evidence Level: **MODERATE-STRONG**
+### Evidence Level: **MODERATE** (small, preliminary studies)
 
 #### Key Studies
 
@@ -83,7 +83,7 @@
 - Source: https://mattioli1885journals.com/index.php/actabiomedica/article/view/10755
 
 #### Recommendation
-**Use 432 Hz as default carrier frequency** - has the strongest evidence for calming effects.
+These tools use 432 Hz as the default carrier. The cited studies are small and compare 432 Hz with 440 Hz; this repo has not checked that they carry over to a binaural carrier.
 
 ---
 
@@ -103,7 +103,6 @@
 **Anxiety Study (2023)**
 - Experimental group showed decreased state anxiety
 - Mean reduction: 4.625 points (p = 0.006)
-- Suggests activation of relaxation pathways
 
 **Ethanol Toxicity Study (Journal of Addiction Research & Therapy)**
 - In vitro study on cells
@@ -127,25 +126,24 @@
 | 285 Hz | Tissue healing | No controlled studies |
 | 396 Hz | Liberation from fear | No controlled studies |
 | 417 Hz | Facilitating change | No controlled studies |
-| **528 Hz** | Love/DNA repair | **Moderate** (see above) |
+| **528 Hz** | Love | **Preliminary** for cortisol and oxytocin (see above); DNA-repair claims lack rigorous evidence |
 | 639 Hz | Relationships | No controlled studies |
 | 741 Hz | Awakening intuition | No controlled studies |
 | 852 Hz | Spiritual order | No controlled studies |
 | 963 Hz | Divine consciousness | No controlled studies |
 
 #### Historical Note
-The specific solfeggio frequencies were popularized in the 1990s. Claims of ancient origins lack historical documentation. However, absence of evidence ≠ evidence of absence.
+The specific solfeggio frequencies were popularized in the 1990s. Claims of ancient origins lack historical documentation.
 
 ---
 
 ## 5. Schumann Resonance (7.83 Hz)
 
-### Evidence Level: **MODERATE**
+### Evidence Level: **WEAK**
 
 - Earth's electromagnetic resonance frequency
-- Corresponds to low theta brainwave state
-- Some research suggests health benefits of exposure
-- Used in some grounding/earthing research
+- Falls at the top of the theta band (4-8 Hz) as defined in this document
+- No controlled study of listening to a 7.83 Hz beat is cited in this repo
 
 ---
 
@@ -173,7 +171,7 @@ The specific solfeggio frequencies were popularized in the 1990s. Claims of anci
 ## 7. Practical Recommendations
 
 ### For Meditation/Relaxation
-- **Carrier**: 432 Hz (evidence-based calming)
+- **Carrier**: 432 Hz (default carrier; the evidence is preliminary)
 - **Beat**: 6 Hz theta (creativity, deep relaxation)
 - **Quality**: High (48kHz, 24-bit)
 - **Harmonics**: Warm (even harmonics)
@@ -190,10 +188,10 @@ The specific solfeggio frequencies were popularized in the 1990s. Claims of anci
 - **Quality**: Standard
 - **Add**: Pink noise at 10-20% for masking
 
-### For Anxiety Reduction
+### For Relaxation
 - **Frequency**: 528 Hz pure tone
 - **Or**: 432 Hz carrier + 10 Hz alpha beat
-- **Duration**: Minimum 5 minutes (per research)
+- **Duration**: At least 5 minutes (the exposure in the cited 528 Hz study)
 
 ---
 

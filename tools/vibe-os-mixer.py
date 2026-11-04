@@ -3,8 +3,8 @@
 Vibe OS Audio Mixer - Research-Based Frequency + Music Integration System
 Part of the Vibe OS Audio System
 
-Combines AI-generated music (Suno/Hailuo/Udio) with healing frequencies
-at research-backed levels for maximum therapeutic impact.
+Combines AI-generated music (Suno/Hailuo/Udio) with tones and binaural beats
+at preset levels.
 
 Research Sources:
 - PMC10196448: Binaural beats effective at 40 dB (comfortable listening)
@@ -107,7 +107,7 @@ INSTRUMENT_RECOMMENDATIONS = {
 # ============================================================================
 
 BRAINWAVE_PRESETS = {
-    "delta": {"beat": 2, "carrier": 200, "effect": "Deep sleep, healing"},
+    "delta": {"beat": 2, "carrier": 200, "effect": "Deep sleep"},
     "theta": {"beat": 6, "carrier": 300, "effect": "Meditation, creativity"},
     "alpha": {"beat": 10, "carrier": 400, "effect": "Relaxation, calm focus"},
     "beta": {"beat": 18, "carrier": 400, "effect": "Focus, alertness"},
